@@ -1,0 +1,31 @@
+{
+  "name": "foodgame",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack",
+    "watch": "webpack --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kvp03789/foodgame.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kvp03789/foodgame/issues"
+  },
+  "homepage": "https://github.com/kvp03789/foodgame#readme",
+  "dependencies": {
+    "webpack": "^5.75.0"
+  },
+  "devDependencies": {
+    "@babel/preset-env": "^7.20.2",
+    "css-loader": "^6.7.2",
+    "style-loader": "^3.3.1",
+    "webpack-cli": "^5.0.0"
+  }
+}
