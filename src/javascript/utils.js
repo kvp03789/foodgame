@@ -13,6 +13,5 @@ export function setDifficulty(){
 
 export function generateRandom(min, max){
     let randomNumber = Math.floor(Math.random() * (max - min + 1)) + min;
-    console.log(randomNumber)
     return randomNumber;
 }
