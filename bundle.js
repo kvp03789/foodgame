@@ -21,7 +21,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".hello {\n    color: rgb(79, 234, 87);\n}", "",{"version":3,"sources":["webpack://./src/css/style.css"],"names":[],"mappings":"AAAA;IACI,uBAAuB;AAC3B","sourcesContent":[".hello {\n    color: rgb(79, 234, 87);\n}"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, ".hello {\n    color: rgb(79, 234, 87);\n}\n\n.burger-container{\n    display: flex;\n    justify-content: center;\n    align-items: center;\n}\n\n.buns{\n    background-color: rgb(239, 195, 141);\n    border-radius: 50%;\n}\n.lettuce{\n    background-color: green;\n}\n\n.tomato{\n    background-color: red;\n    border-radius: 50%;\n}\n\n.ketchup{\n    background-color: red;\n    height:15px;\n}\n\n.onion{\n    background-color: purple;\n    border-radius: 50%;\n}\n\n.burger-topping{\n    height: 75px;\n    width: 75px\n}\n\n.customer-queue{\n    display: flex;\n    justify-content: center;\n    align-items: center;\n}\n\n.customer-container {\n    display: flex;\n    justify-content: center;\n    align-items: center;\n}", "",{"version":3,"sources":["webpack://./src/css/style.css"],"names":[],"mappings":"AAAA;IACI,uBAAuB;AAC3B;;AAEA;IACI,aAAa;IACb,uBAAuB;IACvB,mBAAmB;AACvB;;AAEA;IACI,oCAAoC;IACpC,kBAAkB;AACtB;AACA;IACI,uBAAuB;AAC3B;;AAEA;IACI,qBAAqB;IACrB,kBAAkB;AACtB;;AAEA;IACI,qBAAqB;IACrB,WAAW;AACf;;AAEA;IACI,wBAAwB;IACxB,kBAAkB;AACtB;;AAEA;IACI,YAAY;IACZ;AACJ;;AAEA;IACI,aAAa;IACb,uBAAuB;IACvB,mBAAmB;AACvB;;AAEA;IACI,aAAa;IACb,uBAAuB;IACvB,mBAAmB;AACvB","sourcesContent":[".hello {\n    color: rgb(79, 234, 87);\n}\n\n.burger-container{\n    display: flex;\n    justify-content: center;\n    align-items: center;\n}\n\n.buns{\n    background-color: rgb(239, 195, 141);\n    border-radius: 50%;\n}\n.lettuce{\n    background-color: green;\n}\n\n.tomato{\n    background-color: red;\n    border-radius: 50%;\n}\n\n.ketchup{\n    background-color: red;\n    height:15px;\n}\n\n.onion{\n    background-color: purple;\n    border-radius: 50%;\n}\n\n.burger-topping{\n    height: 75px;\n    width: 75px\n}\n\n.customer-queue{\n    display: flex;\n    justify-content: center;\n    align-items: center;\n}\n\n.customer-container {\n    display: flex;\n    justify-content: center;\n    align-items: center;\n}"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -510,6 +510,88 @@ module.exports = styleTagTransform;
 
 /***/ }),
 
+/***/ "./src/javascript/dom.js":
+/*!*******************************!*\
+  !*** ./src/javascript/dom.js ***!
+  \*******************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "clearDom": () => (/* binding */ clearDom),
+/* harmony export */   "clearQueue": () => (/* binding */ clearQueue),
+/* harmony export */   "deleteCustomerDom": () => (/* binding */ deleteCustomerDom),
+/* harmony export */   "makeBurgerStationDom": () => (/* binding */ makeBurgerStationDom),
+/* harmony export */   "makeCustomerDom": () => (/* binding */ makeCustomerDom)
+/* harmony export */ });
+/* harmony import */ var _utils__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./utils */ "./src/javascript/utils.js");
+/* harmony import */ var _images_customericon_png__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../images/customericon.png */ "./src/images/customericon.png");
+
+
+
+function clearDom(){
+    const container = document.querySelector(".container");
+    while(container.firstChild){
+        container.firstChild.remove();
+    }
+}
+
+function clearQueue(){
+    const container = document.querySelector(".container");
+    const queue = document.querySelector(".customer-queue");
+    while(queue.firstChild){
+        queue.firstChild.remove();
+    }
+}
+
+function makeBurgerStationDom(){
+    const container = document.querySelector(".container");
+    const burgerContainer = document.querySelector(".burger-container")
+    burgerContainer.classList.add("burger-station")
+    const buns = document.createElement("div")
+    const lettuce = document.createElement("div")
+    const tomato = document.createElement("div")
+    const ketchup = document.createElement("div")
+    const onion = document.createElement("div")
+    buns.classList.add("buns", "burger-topping")
+    lettuce.classList.add("lettuce", "burger-topping");
+    tomato.classList.add("tomato", "burger-topping");
+    ketchup.classList.add("ketchup", "burger-topping");
+    onion.classList.add("onion", "burger-topping")
+    burgerContainer.append(buns, lettuce, tomato, ketchup, onion, buns);
+    container.append(burgerContainer)
+}
+
+function makeCustomerDom(queue){
+    const container = document.querySelector(".container");
+    const domQueue = document.querySelector(".customer-queue");
+    
+    for(let i = 0; i < queue.length; i++){
+        const customerContainer = document.createElement("div");
+        const customer = document.createElement("div");
+        const customerName = document.createElement("h3");
+        const customerIcon = new Image();
+
+        customerContainer.classList.add("customer-container")
+        customerIcon.classList.add("customer-icon")
+        customerIcon.src = _images_customericon_png__WEBPACK_IMPORTED_MODULE_1__;
+        customer.classList.add("customer")
+        customer.append(customerIcon);
+        customer.setAttribute('id', `${i}`)
+        customerName.innerText = `${queue[i].name}`
+
+        customerContainer.append(customer, customerName)
+        domQueue.append(customerContainer);
+    } 
+}
+
+
+function deleteCustomerDom(i){
+    document.getElementById(`${i}`).remove();
+}
+
+/***/ }),
+
 /***/ "./src/javascript/flow.js":
 /*!********************************!*\
   !*** ./src/javascript/flow.js ***!
@@ -522,6 +604,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _game__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./game */ "./src/javascript/game.js");
 /* harmony import */ var _utils__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./utils */ "./src/javascript/utils.js");
+/* harmony import */ var _dom__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./dom */ "./src/javascript/dom.js");
+
+
 
 
 
@@ -533,14 +618,17 @@ class Game{
     addNewCustomer(newGame){
         if(this.queue.length < 3 ){
             let difficulty = (0,_utils__WEBPACK_IMPORTED_MODULE_1__.setDifficulty)();
-            const newCustomer = new _game__WEBPACK_IMPORTED_MODULE_0__.Customer(difficulty, "null", "null");
+            let name = (0,_utils__WEBPACK_IMPORTED_MODULE_1__.randomName)(newGame.queue);
+            const newCustomer = new _game__WEBPACK_IMPORTED_MODULE_0__.Customer(difficulty, "null", "null", name);
             this.queue.push(newCustomer);
             let i = this.queue.indexOf(newCustomer)
-            console.log("customer added", this.queue)
+            console.log(`${newCustomer.name} walked in the door`, this.queue)
+            ;(0,_dom__WEBPACK_IMPORTED_MODULE_2__.clearQueue)()
+            ;(0,_dom__WEBPACK_IMPORTED_MODULE_2__.makeCustomerDom)(newGame.queue);
             // setTimeout(newCustomer.makeOrder, 1000)
             newCustomer.makeOrder();
             newCustomer.startTimer(i, newGame);
-            }else console.log("get fucked")
+            }else console.log("queue full")
         }
     
         gameLoop(newGame){
@@ -570,14 +658,17 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _index_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./index.js */ "./src/javascript/index.js");
 /* harmony import */ var _utils_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./utils.js */ "./src/javascript/utils.js");
+/* harmony import */ var _dom_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./dom.js */ "./src/javascript/dom.js");
+
 
 
 
 class Customer {
-    constructor(difficulty, foodRequest, drinkRequest){
+    constructor(difficulty, foodRequest, drinkRequest, name){
         this.difficulty = difficulty
         this.foodRequest = foodRequest
         this.drinkRequest = drinkRequest
+        this.name = name
         this.order = []
     }
 
@@ -654,16 +745,18 @@ class Customer {
     startTimer(index, newGame){
         let time;
     if(this.difficulty === "easy"){
-        time = 10000;
+        time = 14000;
     }else if(this.difficulty ==="medium"){
-        time = 7000
-    } else time = 2000
+        time = 11000
+    } else time = 8000
     setTimeout(function(){this.removeFromQueue(index, newGame);}.bind(this), time)
     }
 
     removeFromQueue(index, newGame){
-        newGame.queue.splice(index, 1);
-        console.log(`Customer is fed up and is leaving T-T`, newGame.queue) 
+        newGame.queue.splice(newGame.queue.indexOf(this), 1);
+        (0,_dom_js__WEBPACK_IMPORTED_MODULE_2__.clearQueue)();
+        (0,_dom_js__WEBPACK_IMPORTED_MODULE_2__.makeCustomerDom)(newGame.queue);
+        console.log(`${this.name} is fed up and is leaving T-T`, newGame.queue) 
     }
 
 }
@@ -726,6 +819,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _utils__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./utils */ "./src/javascript/utils.js");
 /* harmony import */ var _game__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./game */ "./src/javascript/game.js");
 /* harmony import */ var _flow__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./flow */ "./src/javascript/flow.js");
+/* harmony import */ var _dom__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./dom */ "./src/javascript/dom.js");
+
 
 
 
@@ -741,7 +836,7 @@ __webpack_require__.r(__webpack_exports__);
 // console.log(newCustomer, newPlate, player.money)
 const newGame = new _flow__WEBPACK_IMPORTED_MODULE_3__.Game()
 newGame.gameLoop(newGame)
-console.log(newGame)
+;(0,_dom__WEBPACK_IMPORTED_MODULE_4__.makeBurgerStationDom)();
 
 /***/ }),
 
@@ -754,6 +849,9 @@ console.log(newGame)
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "generateRandom": () => (/* binding */ generateRandom),
+/* harmony export */   "makeEle": () => (/* binding */ makeEle),
+/* harmony export */   "nameArray": () => (/* binding */ nameArray),
+/* harmony export */   "randomName": () => (/* binding */ randomName),
 /* harmony export */   "setDifficulty": () => (/* binding */ setDifficulty)
 /* harmony export */ });
 function setDifficulty(){
@@ -773,6 +871,35 @@ function generateRandom(min, max){
     let randomNumber = Math.floor(Math.random() * (max - min + 1)) + min;
     return randomNumber;
 }
+
+function makeEle(ele, addClass){
+    const item = document.createElement(ele);
+    item.classList.add(addClass);
+}
+
+const nameArray = ["gary", "stu", "jana", "ashlee", "vikram", "ali", "jerry",
+ "ty", "kyle", "dana", "stephen", "jessica", "arnie", "amy", "roger", "milo", "manny",
+"bill", "fred", "sarah", "claire", "anne-marie", "jade", "ryan", "eli", "joe", "tabi",
+"scott", "rita", "angelica", "maggie"]
+
+const randomName = function(queue){
+    let i = generateRandom(0, 30)
+    const name = nameArray[i];
+    if(queue.includes(`${name}`) === false){
+        return name
+    }
+    randomName(queue)
+}
+
+/***/ }),
+
+/***/ "./src/images/customericon.png":
+/*!*************************************!*\
+  !*** ./src/images/customericon.png ***!
+  \*************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+module.exports = __webpack_require__.p + "c79eb9f1b9472dd3c0ba.png";
 
 /***/ })
 
@@ -827,6 +954,18 @@ function generateRandom(min, max){
 /******/ 		};
 /******/ 	})();
 /******/ 	
+/******/ 	/* webpack/runtime/global */
+/******/ 	(() => {
+/******/ 		__webpack_require__.g = (function() {
+/******/ 			if (typeof globalThis === 'object') return globalThis;
+/******/ 			try {
+/******/ 				return this || new Function('return this')();
+/******/ 			} catch (e) {
+/******/ 				if (typeof window === 'object') return window;
+/******/ 			}
+/******/ 		})();
+/******/ 	})();
+/******/ 	
 /******/ 	/* webpack/runtime/hasOwnProperty shorthand */
 /******/ 	(() => {
 /******/ 		__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
@@ -841,6 +980,26 @@ function generateRandom(min, max){
 /******/ 			}
 /******/ 			Object.defineProperty(exports, '__esModule', { value: true });
 /******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/publicPath */
+/******/ 	(() => {
+/******/ 		var scriptUrl;
+/******/ 		if (__webpack_require__.g.importScripts) scriptUrl = __webpack_require__.g.location + "";
+/******/ 		var document = __webpack_require__.g.document;
+/******/ 		if (!scriptUrl && document) {
+/******/ 			if (document.currentScript)
+/******/ 				scriptUrl = document.currentScript.src
+/******/ 			if (!scriptUrl) {
+/******/ 				var scripts = document.getElementsByTagName("script");
+/******/ 				if(scripts.length) scriptUrl = scripts[scripts.length - 1].src
+/******/ 			}
+/******/ 		}
+/******/ 		// When supporting browsers where an automatic publicPath is not supported you must specify an output.publicPath manually via configuration
+/******/ 		// or pass an empty string ("") and set the __webpack_public_path__ variable from your code to use your own logic.
+/******/ 		if (!scriptUrl) throw new Error("Automatic publicPath is not supported in this browser");
+/******/ 		scriptUrl = scriptUrl.replace(/#.*$/, "").replace(/\?.*$/, "").replace(/\/[^\/]+$/, "/");
+/******/ 		__webpack_require__.p = scriptUrl;
 /******/ 	})();
 /******/ 	
 /******/ 	/* webpack/runtime/nonce */
