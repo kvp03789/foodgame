@@ -1,7 +1,8 @@
 import '../css/style.css';
-import { setDifficulty } from './utils';
+import { nameArray } from './utils';
 import { Customer, Plate, player } from './game';
 import { Game } from './flow';
+import { makeBurgerStationDom } from './dom';
 // let difficulty = setDifficulty();
 // const newCustomer = new Customer(difficulty, "null", "null");
 // const newPlate = new Plate();
@@ -13,4 +14,4 @@ import { Game } from './flow';
 // console.log(newCustomer, newPlate, player.money)
 const newGame = new Game()
 newGame.gameLoop(newGame)
-console.log(newGame)
+makeBurgerStationDom();

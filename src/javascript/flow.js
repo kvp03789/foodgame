@@ -1,5 +1,7 @@
 import { Customer } from './game';
 import {generateRandom, setDifficulty} from './utils';
+import { clearQueue, makeCustomerDom, makeBurgerStationDom } from './dom';
+import { randomName } from './utils';
 
 export class Game{
     constructor(){
@@ -9,14 +11,17 @@ export class Game{
     addNewCustomer(newGame){
         if(this.queue.length < 3 ){
             let difficulty = setDifficulty();
-            const newCustomer = new Customer(difficulty, "null", "null");
+            let name = randomName(newGame.queue);
+            const newCustomer = new Customer(difficulty, "null", "null", name);
             this.queue.push(newCustomer);
             let i = this.queue.indexOf(newCustomer)
-            console.log("customer added", this.queue)
+            console.log(`${newCustomer.name} walked in the door`, this.queue)
+            clearQueue()
+            makeCustomerDom(newGame.queue);
             // setTimeout(newCustomer.makeOrder, 1000)
             newCustomer.makeOrder();
             newCustomer.startTimer(i, newGame);
-            }else console.log("get fucked")
+            }else console.log("queue full")
         }
     
         gameLoop(newGame){

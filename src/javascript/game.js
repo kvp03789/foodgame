@@ -1,11 +1,13 @@
 import { newGame } from './index.js'
 import {generateRandom} from './utils.js'
+import { clearQueue, makeCustomerDom } from './dom.js'
 
 export class Customer {
-    constructor(difficulty, foodRequest, drinkRequest){
+    constructor(difficulty, foodRequest, drinkRequest, name){
         this.difficulty = difficulty
         this.foodRequest = foodRequest
         this.drinkRequest = drinkRequest
+        this.name = name
         this.order = []
     }
 
@@ -82,16 +84,18 @@ export class Customer {
     startTimer(index, newGame){
         let time;
     if(this.difficulty === "easy"){
-        time = 10000;
+        time = 14000;
     }else if(this.difficulty ==="medium"){
-        time = 7000
-    } else time = 2000
+        time = 11000
+    } else time = 8000
     setTimeout(function(){this.removeFromQueue(index, newGame);}.bind(this), time)
     }
 
     removeFromQueue(index, newGame){
-        newGame.queue.splice(index, 1);
-        console.log(`Customer is fed up and is leaving T-T`, newGame.queue) 
+        newGame.queue.splice(newGame.queue.indexOf(this), 1);
+        clearQueue();
+        makeCustomerDom(newGame.queue);
+        console.log(`${this.name} is fed up and is leaving T-T`, newGame.queue) 
     }
 
 }
