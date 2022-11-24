@@ -16,11 +16,11 @@ export class Game{
             this.queue.push(newCustomer);
             let i = this.queue.indexOf(newCustomer)
             console.log(`${newCustomer.name} walked in the door`, this.queue)
-            clearQueue()
-            makeCustomerDom(newGame.queue);
             // setTimeout(newCustomer.makeOrder, 1000)
             newCustomer.makeOrder();
             newCustomer.startTimer(i, newGame);
+            clearQueue()
+            makeCustomerDom(newGame.queue);
             }else console.log("queue full")
         }
     

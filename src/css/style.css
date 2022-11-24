@@ -40,10 +40,20 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 150px;
+    width: 100vw;
+    border-bottom: 2px solid black;
 }
 
 .customer-container {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.drop-zone{
+    height: 100px;
+    width: 100px;
+    border: 2px solid green;
+    border-radius: 50%;
 }

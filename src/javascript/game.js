@@ -22,7 +22,12 @@ export class Customer {
             this.makeSushiRequest();
             this.order.push(this.foodRequest);
             this.order.push(this.drinkRequest);
-        }else{
+        }else if(this.foodRequest === "pizza"){
+            this.makePizzaRequest();
+            this.order.push(this.foodRequest);
+            this.order.push(this.drinkRequest);
+        }else if(this.foodRequest === "pastry"){
+            this.makePastryRequest();
             this.order.push(this.foodRequest);
             this.order.push(this.drinkRequest);
         }
@@ -69,6 +74,14 @@ export class Customer {
             salmon = 1
         } else salmon = 0;
         this.foodRequest = new Sushi(tuna, salmon);
+    }
+
+    makePizzaRequest(){
+        this.foodRequest = new Pizza();
+    }
+
+    makePastryRequest(){
+        this.foodRequest = new Pastry();
     }
 
     checkPlate(plate, player){
@@ -123,6 +136,7 @@ export class Burger {
         this.tomato = tomato;
         this.onion = onion;
         this.ketchup = ketchup
+        this.name = "burger"
     }
 }
 
@@ -130,11 +144,29 @@ export class Sushi {
     constructor(tuna, salmon){
         this.tuna = tuna
         this.salmon = salmon
+        this.name = "sushi"
+    }
+}
+
+export class Pizza {
+    constructor(){
+        this.toppings = "null";
+        this.name ="pizza"
+    }
+}
+
+export class Pastry {
+    constructor(){
+        this.cream = "null";
+        this.name = "pastry"
     }
 }
 
 export const player = {
     money: 0,
+    1: [],
+    2: [],
+    3: [],
     addMoney(amount){
         this.money += amount
     }

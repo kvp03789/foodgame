@@ -21,7 +21,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".hello {\n    color: rgb(79, 234, 87);\n}\n\n.burger-container{\n    display: flex;\n    justify-content: center;\n    align-items: center;\n}\n\n.buns{\n    background-color: rgb(239, 195, 141);\n    border-radius: 50%;\n}\n.lettuce{\n    background-color: green;\n}\n\n.tomato{\n    background-color: red;\n    border-radius: 50%;\n}\n\n.ketchup{\n    background-color: red;\n    height:15px;\n}\n\n.onion{\n    background-color: purple;\n    border-radius: 50%;\n}\n\n.burger-topping{\n    height: 75px;\n    width: 75px\n}\n\n.customer-queue{\n    display: flex;\n    justify-content: center;\n    align-items: center;\n}\n\n.customer-container {\n    display: flex;\n    justify-content: center;\n    align-items: center;\n}", "",{"version":3,"sources":["webpack://./src/css/style.css"],"names":[],"mappings":"AAAA;IACI,uBAAuB;AAC3B;;AAEA;IACI,aAAa;IACb,uBAAuB;IACvB,mBAAmB;AACvB;;AAEA;IACI,oCAAoC;IACpC,kBAAkB;AACtB;AACA;IACI,uBAAuB;AAC3B;;AAEA;IACI,qBAAqB;IACrB,kBAAkB;AACtB;;AAEA;IACI,qBAAqB;IACrB,WAAW;AACf;;AAEA;IACI,wBAAwB;IACxB,kBAAkB;AACtB;;AAEA;IACI,YAAY;IACZ;AACJ;;AAEA;IACI,aAAa;IACb,uBAAuB;IACvB,mBAAmB;AACvB;;AAEA;IACI,aAAa;IACb,uBAAuB;IACvB,mBAAmB;AACvB","sourcesContent":[".hello {\n    color: rgb(79, 234, 87);\n}\n\n.burger-container{\n    display: flex;\n    justify-content: center;\n    align-items: center;\n}\n\n.buns{\n    background-color: rgb(239, 195, 141);\n    border-radius: 50%;\n}\n.lettuce{\n    background-color: green;\n}\n\n.tomato{\n    background-color: red;\n    border-radius: 50%;\n}\n\n.ketchup{\n    background-color: red;\n    height:15px;\n}\n\n.onion{\n    background-color: purple;\n    border-radius: 50%;\n}\n\n.burger-topping{\n    height: 75px;\n    width: 75px\n}\n\n.customer-queue{\n    display: flex;\n    justify-content: center;\n    align-items: center;\n}\n\n.customer-container {\n    display: flex;\n    justify-content: center;\n    align-items: center;\n}"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, ".hello {\n    color: rgb(79, 234, 87);\n}\n\n.burger-container{\n    display: flex;\n    justify-content: center;\n    align-items: center;\n}\n\n.buns{\n    background-color: rgb(239, 195, 141);\n    border-radius: 50%;\n}\n.lettuce{\n    background-color: green;\n}\n\n.tomato{\n    background-color: red;\n    border-radius: 50%;\n}\n\n.ketchup{\n    background-color: red;\n    height:15px;\n}\n\n.onion{\n    background-color: purple;\n    border-radius: 50%;\n}\n\n.burger-topping{\n    height: 75px;\n    width: 75px\n}\n\n.customer-queue{\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    height: 150px;\n    width: 100vw;\n    border-bottom: 2px solid black;\n}\n\n.customer-container {\n    display: flex;\n    justify-content: center;\n    align-items: center;\n}\n\n.drop-zone{\n    height: 100px;\n    width: 100px;\n    border: 2px solid green;\n    border-radius: 50%;\n}", "",{"version":3,"sources":["webpack://./src/css/style.css"],"names":[],"mappings":"AAAA;IACI,uBAAuB;AAC3B;;AAEA;IACI,aAAa;IACb,uBAAuB;IACvB,mBAAmB;AACvB;;AAEA;IACI,oCAAoC;IACpC,kBAAkB;AACtB;AACA;IACI,uBAAuB;AAC3B;;AAEA;IACI,qBAAqB;IACrB,kBAAkB;AACtB;;AAEA;IACI,qBAAqB;IACrB,WAAW;AACf;;AAEA;IACI,wBAAwB;IACxB,kBAAkB;AACtB;;AAEA;IACI,YAAY;IACZ;AACJ;;AAEA;IACI,aAAa;IACb,uBAAuB;IACvB,mBAAmB;IACnB,aAAa;IACb,YAAY;IACZ,8BAA8B;AAClC;;AAEA;IACI,aAAa;IACb,uBAAuB;IACvB,mBAAmB;AACvB;;AAEA;IACI,aAAa;IACb,YAAY;IACZ,uBAAuB;IACvB,kBAAkB;AACtB","sourcesContent":[".hello {\n    color: rgb(79, 234, 87);\n}\n\n.burger-container{\n    display: flex;\n    justify-content: center;\n    align-items: center;\n}\n\n.buns{\n    background-color: rgb(239, 195, 141);\n    border-radius: 50%;\n}\n.lettuce{\n    background-color: green;\n}\n\n.tomato{\n    background-color: red;\n    border-radius: 50%;\n}\n\n.ketchup{\n    background-color: red;\n    height:15px;\n}\n\n.onion{\n    background-color: purple;\n    border-radius: 50%;\n}\n\n.burger-topping{\n    height: 75px;\n    width: 75px\n}\n\n.customer-queue{\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    height: 150px;\n    width: 100vw;\n    border-bottom: 2px solid black;\n}\n\n.customer-container {\n    display: flex;\n    justify-content: center;\n    align-items: center;\n}\n\n.drop-zone{\n    height: 100px;\n    width: 100px;\n    border: 2px solid green;\n    border-radius: 50%;\n}"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -581,13 +581,107 @@ function makeCustomerDom(queue){
         customerName.innerText = `${queue[i].name}`
 
         customerContainer.append(customer, customerName)
+        displayCustomerOrder(queue[i], customerContainer)
         domQueue.append(customerContainer);
     } 
 }
 
+function displayCustomerOrder(customer, parentEle){
+    const customerOrder = document.createElement("div");
+    const customerText = document.createElement("p")
+    const customerSpecifics = document.createElement("p")
+    const customerText2 = document.createElement("p")
+    if(typeof customer.order[0] === "object"){
+        customerText.innerText = customer.order[0].name;
+        let specifics = (0,_utils__WEBPACK_IMPORTED_MODULE_0__.displayCustomerSpecifics)(customer.order[0], customerSpecifics)
+        customerSpecifics.innerText = `${specifics}`
+    }else {customerText.innerText = customer.order[0]
+            customerSpecifics.innerText = ""}
+    customerText2.innerText = customer.order[1];
+    customerOrder.classList.add("customer-order")
+    customerOrder.append(customerText, customerSpecifics, customerText2)
+    parentEle.append(customerOrder)
+}
 
 function deleteCustomerDom(i){
     document.getElementById(`${i}`).remove();
+}
+
+/***/ }),
+
+/***/ "./src/javascript/draganddrop.js":
+/*!***************************************!*\
+  !*** ./src/javascript/draganddrop.js ***!
+  \***************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "dragAndDrop": () => (/* binding */ dragAndDrop)
+/* harmony export */ });
+/* harmony import */ var _game__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./game */ "./src/javascript/game.js");
+
+
+let dataObject = {
+    foodObj: "null",
+    drinkObj: "null",
+    id: "null"
+}
+
+function dragAndDrop(){
+    document.addEventListener("DOMContentLoaded", () => {
+
+        document.body.addEventListener('dragstart', handleDragStart);
+        document.body.addEventListener('drop', handleDrop);
+        document.body.addEventListener('dragover', handleOver);
+
+    })
+    
+    function handleDragStart(e){
+        let obj = e.target;
+        if(!obj.closest('.draggable')) return;
+        if(obj.classList.contains("draggable")){
+            obj = obj.firstElementChild
+        }
+        console.log("DRAG START", obj)
+        if(obj.parentElement.classList.contains("buns")){
+            const burger = new _game__WEBPACK_IMPORTED_MODULE_0__.Burger(0, 0, 0, 0);
+            dataObject.foodObj = burger
+            console.log(burger, dataObject)
+        }else if(obj.parentElement.classList.contains("pizza")){
+            const pizza = new _game__WEBPACK_IMPORTED_MODULE_0__.Pizza();
+            dataObject.foodObj = pizza;
+        }else if(obj.parentElement.classList.contains("sushi")){
+            const sushi = new _game__WEBPACK_IMPORTED_MODULE_0__.Sushi();
+            dataObject.foodObj = sushi;
+        }else if(obj.parentElement.classList.contains("pastry")){
+            const pastry = new _game__WEBPACK_IMPORTED_MODULE_0__.Pastry();
+            dataObject.foodObj = pastry;
+        }
+        else if(obj.parentElement.classList.contains("addon")){
+            let topping = e.target.dataset.ingredient;
+            dataObject.foodObj[topping] = 1;
+        }
+        
+}
+    
+    
+    function handleDrop(e){
+        console.log("DROP")
+        let dropZone = e.target;
+        if(!dropZone.classList.contains("drop-zone")) return;
+
+        e.preventDefault();
+        let num = e.target.dataset.plate
+        _game__WEBPACK_IMPORTED_MODULE_0__.player[num].push(dataObject.foodObj)
+        console.log(dataObject.foodObj)
+
+    }
+    
+    
+    function handleOver(e){
+    e.preventDefault();
+    }
 }
 
 /***/ }),
@@ -623,11 +717,11 @@ class Game{
             this.queue.push(newCustomer);
             let i = this.queue.indexOf(newCustomer)
             console.log(`${newCustomer.name} walked in the door`, this.queue)
-            ;(0,_dom__WEBPACK_IMPORTED_MODULE_2__.clearQueue)()
-            ;(0,_dom__WEBPACK_IMPORTED_MODULE_2__.makeCustomerDom)(newGame.queue);
             // setTimeout(newCustomer.makeOrder, 1000)
             newCustomer.makeOrder();
             newCustomer.startTimer(i, newGame);
+            (0,_dom__WEBPACK_IMPORTED_MODULE_2__.clearQueue)()
+            ;(0,_dom__WEBPACK_IMPORTED_MODULE_2__.makeCustomerDom)(newGame.queue);
             }else console.log("queue full")
         }
     
@@ -652,6 +746,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "Burger": () => (/* binding */ Burger),
 /* harmony export */   "Customer": () => (/* binding */ Customer),
+/* harmony export */   "Pastry": () => (/* binding */ Pastry),
+/* harmony export */   "Pizza": () => (/* binding */ Pizza),
 /* harmony export */   "Plate": () => (/* binding */ Plate),
 /* harmony export */   "Sushi": () => (/* binding */ Sushi),
 /* harmony export */   "player": () => (/* binding */ player)
@@ -683,7 +779,12 @@ class Customer {
             this.makeSushiRequest();
             this.order.push(this.foodRequest);
             this.order.push(this.drinkRequest);
-        }else{
+        }else if(this.foodRequest === "pizza"){
+            this.makePizzaRequest();
+            this.order.push(this.foodRequest);
+            this.order.push(this.drinkRequest);
+        }else if(this.foodRequest === "pastry"){
+            this.makePastryRequest();
             this.order.push(this.foodRequest);
             this.order.push(this.drinkRequest);
         }
@@ -730,6 +831,14 @@ class Customer {
             salmon = 1
         } else salmon = 0;
         this.foodRequest = new Sushi(tuna, salmon);
+    }
+
+    makePizzaRequest(){
+        this.foodRequest = new Pizza();
+    }
+
+    makePastryRequest(){
+        this.foodRequest = new Pastry();
     }
 
     checkPlate(plate, player){
@@ -784,6 +893,7 @@ class Burger {
         this.tomato = tomato;
         this.onion = onion;
         this.ketchup = ketchup
+        this.name = "burger"
     }
 }
 
@@ -791,11 +901,29 @@ class Sushi {
     constructor(tuna, salmon){
         this.tuna = tuna
         this.salmon = salmon
+        this.name = "sushi"
+    }
+}
+
+class Pizza {
+    constructor(){
+        this.toppings = "null";
+        this.name ="pizza"
+    }
+}
+
+class Pastry {
+    constructor(){
+        this.cream = "null";
+        this.name = "pastry"
     }
 }
 
 const player = {
     money: 0,
+    1: [],
+    2: [],
+    3: [],
     addMoney(amount){
         this.money += amount
     }
@@ -820,6 +948,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _game__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./game */ "./src/javascript/game.js");
 /* harmony import */ var _flow__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./flow */ "./src/javascript/flow.js");
 /* harmony import */ var _dom__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./dom */ "./src/javascript/dom.js");
+/* harmony import */ var _draganddrop__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./draganddrop */ "./src/javascript/draganddrop.js");
+
 
 
 
@@ -836,7 +966,8 @@ __webpack_require__.r(__webpack_exports__);
 // console.log(newCustomer, newPlate, player.money)
 const newGame = new _flow__WEBPACK_IMPORTED_MODULE_3__.Game()
 newGame.gameLoop(newGame)
-;(0,_dom__WEBPACK_IMPORTED_MODULE_4__.makeBurgerStationDom)();
+//makeBurgerStationDom();
+;(0,_draganddrop__WEBPACK_IMPORTED_MODULE_5__.dragAndDrop)()
 
 /***/ }),
 
@@ -848,6 +979,7 @@ newGame.gameLoop(newGame)
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "displayCustomerSpecifics": () => (/* binding */ displayCustomerSpecifics),
 /* harmony export */   "generateRandom": () => (/* binding */ generateRandom),
 /* harmony export */   "makeEle": () => (/* binding */ makeEle),
 /* harmony export */   "nameArray": () => (/* binding */ nameArray),
@@ -889,6 +1021,22 @@ const randomName = function(queue){
         return name
     }
     randomName(queue)
+}
+
+function displayCustomerSpecifics(obj, ele){
+    // let para;
+    // for(let i in obj){
+    //     if(i === 1){
+    //         para += ` ${i}`
+    //     }
+    // }
+    // return para
+    //console.log(obj.filter)
+    //const keys = Object.keys(obj);
+    //const filtered = keys.filter(k => obj[k] === true)
+    const values = Object.keys(obj).filter(key => obj[key]);
+    return values
+    //return keys.toString();
 }
 
 /***/ }),

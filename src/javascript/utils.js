@@ -34,3 +34,19 @@ export const randomName = function(queue){
     }
     randomName(queue)
 }
+
+export function displayCustomerSpecifics(obj, ele){
+    // let para;
+    // for(let i in obj){
+    //     if(i === 1){
+    //         para += ` ${i}`
+    //     }
+    // }
+    // return para
+    //console.log(obj.filter)
+    //const keys = Object.keys(obj);
+    //const filtered = keys.filter(k => obj[k] === true)
+    const values = Object.keys(obj).filter(key => obj[key]);
+    return values
+    //return keys.toString();
+}

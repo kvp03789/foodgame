@@ -1,4 +1,4 @@
-import {makeEle} from './utils'
+import {displayCustomerSpecifics, makeEle} from './utils'
 import CustomerIcon from '../images/customericon.png'
 
 export function clearDom(){
@@ -53,10 +53,27 @@ export function makeCustomerDom(queue){
         customerName.innerText = `${queue[i].name}`
 
         customerContainer.append(customer, customerName)
+        displayCustomerOrder(queue[i], customerContainer)
         domQueue.append(customerContainer);
     } 
 }
 
+function displayCustomerOrder(customer, parentEle){
+    const customerOrder = document.createElement("div");
+    const customerText = document.createElement("p")
+    const customerSpecifics = document.createElement("p")
+    const customerText2 = document.createElement("p")
+    if(typeof customer.order[0] === "object"){
+        customerText.innerText = customer.order[0].name;
+        let specifics = displayCustomerSpecifics(customer.order[0], customerSpecifics)
+        customerSpecifics.innerText = `${specifics}`
+    }else {customerText.innerText = customer.order[0]
+            customerSpecifics.innerText = ""}
+    customerText2.innerText = customer.order[1];
+    customerOrder.classList.add("customer-order")
+    customerOrder.append(customerText, customerSpecifics, customerText2)
+    parentEle.append(customerOrder)
+}
 
 export function deleteCustomerDom(i){
     document.getElementById(`${i}`).remove();
