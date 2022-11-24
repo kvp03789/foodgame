@@ -2,6 +2,7 @@ import BurgerAll from '../images/burger_all.png';
 import BurgerPlain from '../images/burger_plain.png';
 import BurgerBuns from '../images/burger_buns.png';
 import BurgerMeatTomato from '../images/burger_meat_tomato.png';
+import BurgerMeatLettuce from '../images/burger_meat_lettuce.png;'
 import BurgerMeatTomatoLettuce from '../images/burger_meat_tomato_lettuce.png'
 
 export function setDifficulty(){
@@ -58,5 +59,53 @@ export function displayCustomerSpecifics(obj, ele){
 }
 
 export function showBurgerIcon(obj) {
-    if(obj)
+    let burgerPic;
+    if(
+        obj.lettuce == 1 &&
+        obj.tomato == 0 &&
+        obj.onion == 0){
+            burgerPic.src = BurgerMeatLettuce;
+        }
+    else if(
+        obj.lettuce == 0 &&
+        obj.tomato == 1 &&
+        obj.onion == 0){
+            burgerPic.src = BurgerMeatTomato;
+        }
+    else if(
+        obj.lettuce == 0 &&
+        obj.tomato == 0 &&
+        obj.onion == 1){
+            burgerPic.src = BurgerMeatLettuce;
+        }
+    else if(
+        obj.lettuce == 1 &&
+        obj.tomato == 1 &&
+        obj.onion == 0){
+            burgerPic.src = BurgerMeatLettuceTomato;
+        }
+    else if(
+        obj.lettuce == 0 &&
+        obj.tomato == 1 &&
+        obj.onion == 1){
+            burgerPic.src = BurgerMeatLettuce;
+        }
+    else if(
+        obj.lettuce == 1 &&
+        obj.tomato == 0 &&
+        obj.onion == 1){
+            burgerPic.src = BurgerMeatLettuce;
+        }
+    else if(
+        obj.lettuce == 1 &&
+        obj.tomato == 1 &&
+        obj.onion == 1){
+            burgerPic.src = BurgerAll;
+        }
+    else if(
+        obj.lettuce == 0 &&
+        obj.tomato == 0 &&
+        obj.onion == 0){
+            burgerPic.src = BurgerPlain;
+        }
 }
