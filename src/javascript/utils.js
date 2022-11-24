@@ -1,3 +1,9 @@
+import BurgerAll from '../images/burger_all.png';
+import BurgerPlain from '../images/burger_plain.png';
+import BurgerBuns from '../images/burger_buns.png';
+import BurgerMeatTomato from '../images/burger_meat_tomato.png';
+import BurgerMeatTomatoLettuce from '../images/burger_meat_tomato_lettuce.png'
+
 export function setDifficulty(){
     let num = (Math.random() * 9);
     let difficulty;
@@ -49,4 +55,8 @@ export function displayCustomerSpecifics(obj, ele){
     const values = Object.keys(obj).filter(key => obj[key]);
     return values
     //return keys.toString();
+}
+
+export function showBurgerIcon(obj) {
+    if(obj)
 }

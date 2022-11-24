@@ -63,8 +63,7 @@ export class Customer {
         let lettuce = generateRandom(0, 1);
         let tomato = generateRandom(0, 1);
         let onion = generateRandom(0, 1);
-        let ketchup = generateRandom(0, 1);
-        this.foodRequest = new Burger(lettuce, tomato, onion, ketchup);
+        this.foodRequest = new Burger(lettuce, tomato, onion);
     }
 
     makeSushiRequest(){
@@ -131,11 +130,10 @@ export class Plate{
 }
 
 export class Burger {
-    constructor(lettuce, tomato, onion, ketchup){
+    constructor(lettuce, tomato, onion){
         this.lettuce = lettuce;
         this.tomato = tomato;
         this.onion = onion;
-        this.ketchup = ketchup
         this.name = "burger"
     }
 }
