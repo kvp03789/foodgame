@@ -1,9 +1,13 @@
 import {Burger, Pizza, Sushi, player, Pastry} from './game'
+import {clearPlate, showBurgerIcon} from './utils';
 
 let dataObject = {
     foodObj: "null",
     drinkObj: "null",
-    id: "null"
+    id: "null",
+    getFood(){
+        return this.foodObj
+    }
 }
 
 export function dragAndDrop(){
@@ -21,7 +25,6 @@ export function dragAndDrop(){
         if(obj.classList.contains("draggable")){
             obj = obj.firstElementChild
         }
-        console.log("DRAG START", obj)
         if(obj.parentElement.classList.contains("buns")){
             const burger = new Burger(0, 0, 0, 0);
             dataObject.foodObj = burger
@@ -40,20 +43,32 @@ export function dragAndDrop(){
             let topping = e.target.dataset.ingredient;
             dataObject.foodObj[topping] = 1;
         }
-        
+        // console.log(dataObject.foodObj)
 }
     
     
     function handleDrop(e){
-        console.log("DROP")
         let dropZone = e.target;
-        if(!dropZone.classList.contains("drop-zone")) return;
+        if(!dropZone.closest(".drop-zone")) return;
+        if(dropZone.classList.contains("burger-icon")){
+            dropZone = dropZone.parentElement
+        }
 
         e.preventDefault();
-        let num = e.target.dataset.plate
-        player[num].push(dataObject.foodObj)
-        console.log(dataObject.foodObj)
-
+        let num = dropZone.dataset.plate
+        console.log(`num = ${num}`)
+        if(player[num].length === 0 || undefined){
+            player[num].push(dataObject.foodObj)
+            console.log(dataObject.foodObj, "poop")
+        }else{
+            player[num][0] = dataObject.foodObj
+            //player[num].splice(0, 0, dataObject.getFood())
+            console.log(dataObject.foodObj, "uwuwuw")
+        }
+        clearPlate(num);
+        showBurgerIcon(player[num][0], dropZone)
+        // console.log(player[`${num}`][0])
+        console.log(`PLATE CONTENTS: `, player)
     }
     
     

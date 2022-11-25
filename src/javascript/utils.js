@@ -2,8 +2,11 @@ import BurgerAll from '../images/burger_all.png';
 import BurgerPlain from '../images/burger_plain.png';
 import BurgerBuns from '../images/burger_buns.png';
 import BurgerMeatTomato from '../images/burger_meat_tomato.png';
-import BurgerMeatLettuce from '../images/burger_meat_lettuce.png;'
-import BurgerMeatTomatoLettuce from '../images/burger_meat_tomato_lettuce.png'
+import BurgerMeatOnion from '../images/burger_meat_onion.png';
+import BurgerTomatoOnion from '../images/burger_meat_tomato_onion.png';
+import BurgerMeatLettuce from '../images/burger_meat_lettuce.png';
+import BurgerMeatLettuceOnion from '../images/burger_meat_lettuce_onion.png';
+import BurgerMeatTomatoLettuce from '../images/burger_meat_tomato_lettuce.png';
 
 export function setDifficulty(){
     let num = (Math.random() * 9);
@@ -58,8 +61,21 @@ export function displayCustomerSpecifics(obj, ele){
     //return keys.toString();
 }
 
-export function showBurgerIcon(obj) {
-    let burgerPic;
+export function clearPlate(i){
+    let plate = document.querySelector(`[data-plate="${i}"]`)
+    while(plate.firstChild){
+        plate.firstChild.remove();
+    }
+    console.log(plate)
+}
+
+export function showBurgerIcon(obj, ele) {
+    let burgerPic = new Image();
+    burgerPic.classList.add("burger-icon")
+    if(ele.classList.contains("drop-zone")){
+        burgerPic.classList.add("drop-zone")
+    }
+    
     if(
         obj.lettuce == 1 &&
         obj.tomato == 0 &&
@@ -76,25 +92,25 @@ export function showBurgerIcon(obj) {
         obj.lettuce == 0 &&
         obj.tomato == 0 &&
         obj.onion == 1){
-            burgerPic.src = BurgerMeatLettuce;
+            burgerPic.src = BurgerMeatOnion;
         }
     else if(
         obj.lettuce == 1 &&
         obj.tomato == 1 &&
         obj.onion == 0){
-            burgerPic.src = BurgerMeatLettuceTomato;
+            burgerPic.src = BurgerMeatTomatoLettuce;
         }
     else if(
         obj.lettuce == 0 &&
         obj.tomato == 1 &&
         obj.onion == 1){
-            burgerPic.src = BurgerMeatLettuce;
+            burgerPic.src = BurgerTomatoOnion;
         }
     else if(
         obj.lettuce == 1 &&
         obj.tomato == 0 &&
         obj.onion == 1){
-            burgerPic.src = BurgerMeatLettuce;
+            burgerPic.src = BurgerMeatLettuceOnion;
         }
     else if(
         obj.lettuce == 1 &&
@@ -108,4 +124,5 @@ export function showBurgerIcon(obj) {
         obj.onion == 0){
             burgerPic.src = BurgerPlain;
         }
+        ele.append(burgerPic);
 }

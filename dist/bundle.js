@@ -21,7 +21,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".hello {\n    color: rgb(79, 234, 87);\n}\n\n.burger-container{\n    display: flex;\n    justify-content: center;\n    align-items: center;\n}\n\n.buns{\n    background-color: rgb(239, 195, 141);\n    border-radius: 50%;\n}\n.lettuce{\n    background-color: green;\n}\n\n.tomato{\n    background-color: red;\n    border-radius: 50%;\n}\n\n.ketchup{\n    background-color: red;\n    height:15px;\n}\n\n.onion{\n    background-color: purple;\n    border-radius: 50%;\n}\n\n.burger-topping{\n    height: 75px;\n    width: 75px\n}\n\n.customer-queue{\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    height: 150px;\n    width: 100vw;\n    border-bottom: 2px solid black;\n}\n\n.customer-container {\n    display: flex;\n    justify-content: center;\n    align-items: center;\n}\n\n.drop-zone{\n    height: 100px;\n    width: 100px;\n    border: 2px solid green;\n    border-radius: 50%;\n}", "",{"version":3,"sources":["webpack://./src/css/style.css"],"names":[],"mappings":"AAAA;IACI,uBAAuB;AAC3B;;AAEA;IACI,aAAa;IACb,uBAAuB;IACvB,mBAAmB;AACvB;;AAEA;IACI,oCAAoC;IACpC,kBAAkB;AACtB;AACA;IACI,uBAAuB;AAC3B;;AAEA;IACI,qBAAqB;IACrB,kBAAkB;AACtB;;AAEA;IACI,qBAAqB;IACrB,WAAW;AACf;;AAEA;IACI,wBAAwB;IACxB,kBAAkB;AACtB;;AAEA;IACI,YAAY;IACZ;AACJ;;AAEA;IACI,aAAa;IACb,uBAAuB;IACvB,mBAAmB;IACnB,aAAa;IACb,YAAY;IACZ,8BAA8B;AAClC;;AAEA;IACI,aAAa;IACb,uBAAuB;IACvB,mBAAmB;AACvB;;AAEA;IACI,aAAa;IACb,YAAY;IACZ,uBAAuB;IACvB,kBAAkB;AACtB","sourcesContent":[".hello {\n    color: rgb(79, 234, 87);\n}\n\n.burger-container{\n    display: flex;\n    justify-content: center;\n    align-items: center;\n}\n\n.buns{\n    background-color: rgb(239, 195, 141);\n    border-radius: 50%;\n}\n.lettuce{\n    background-color: green;\n}\n\n.tomato{\n    background-color: red;\n    border-radius: 50%;\n}\n\n.ketchup{\n    background-color: red;\n    height:15px;\n}\n\n.onion{\n    background-color: purple;\n    border-radius: 50%;\n}\n\n.burger-topping{\n    height: 75px;\n    width: 75px\n}\n\n.customer-queue{\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    height: 150px;\n    width: 100vw;\n    border-bottom: 2px solid black;\n}\n\n.customer-container {\n    display: flex;\n    justify-content: center;\n    align-items: center;\n}\n\n.drop-zone{\n    height: 100px;\n    width: 100px;\n    border: 2px solid green;\n    border-radius: 50%;\n}"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, ".hello {\n    color: rgb(79, 234, 87);\n}\n\n.burger-container{\n    display: flex;\n    justify-content: center;\n    align-items: center;\n}\n\n.lettuce{\n    background-color: green;\n}\n\n.tomato{\n    background-color: red;\n    border-radius: 50%;\n}\n\n.ketchup{\n    background-color: red;\n    height:15px;\n}\n\n.onion{\n    background-color: purple;\n    border-radius: 50%;\n}\n\n.burger-topping{\n    height: 75px;\n    width: 75px\n}\n\n.customer-queue{\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    height: 150px;\n    width: 100vw;\n    border-bottom: 2px solid black;\n}\n\n.customer-container {\n    display: flex;\n    justify-content: center;\n    align-items: center;\n}\n\n.plate{\n    height: 100px;\n    width: 100px;\n    border: 2px solid green;\n    border-radius: 50%;\n}\n\n.burger-icon{\n    \n    height: 75px;\n    width: 75px; \n}", "",{"version":3,"sources":["webpack://./src/css/style.css"],"names":[],"mappings":"AAAA;IACI,uBAAuB;AAC3B;;AAEA;IACI,aAAa;IACb,uBAAuB;IACvB,mBAAmB;AACvB;;AAEA;IACI,uBAAuB;AAC3B;;AAEA;IACI,qBAAqB;IACrB,kBAAkB;AACtB;;AAEA;IACI,qBAAqB;IACrB,WAAW;AACf;;AAEA;IACI,wBAAwB;IACxB,kBAAkB;AACtB;;AAEA;IACI,YAAY;IACZ;AACJ;;AAEA;IACI,aAAa;IACb,uBAAuB;IACvB,mBAAmB;IACnB,aAAa;IACb,YAAY;IACZ,8BAA8B;AAClC;;AAEA;IACI,aAAa;IACb,uBAAuB;IACvB,mBAAmB;AACvB;;AAEA;IACI,aAAa;IACb,YAAY;IACZ,uBAAuB;IACvB,kBAAkB;AACtB;;AAEA;;IAEI,YAAY;IACZ,WAAW;AACf","sourcesContent":[".hello {\n    color: rgb(79, 234, 87);\n}\n\n.burger-container{\n    display: flex;\n    justify-content: center;\n    align-items: center;\n}\n\n.lettuce{\n    background-color: green;\n}\n\n.tomato{\n    background-color: red;\n    border-radius: 50%;\n}\n\n.ketchup{\n    background-color: red;\n    height:15px;\n}\n\n.onion{\n    background-color: purple;\n    border-radius: 50%;\n}\n\n.burger-topping{\n    height: 75px;\n    width: 75px\n}\n\n.customer-queue{\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    height: 150px;\n    width: 100vw;\n    border-bottom: 2px solid black;\n}\n\n.customer-container {\n    display: flex;\n    justify-content: center;\n    align-items: center;\n}\n\n.plate{\n    height: 100px;\n    width: 100px;\n    border: 2px solid green;\n    border-radius: 50%;\n}\n\n.burger-icon{\n    \n    height: 75px;\n    width: 75px; \n}"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -529,6 +529,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+
 function clearDom(){
     const container = document.querySelector(".container");
     while(container.firstChild){
@@ -582,6 +583,7 @@ function makeCustomerDom(queue){
 
         customerContainer.append(customer, customerName)
         displayCustomerOrder(queue[i], customerContainer)
+        ;(0,_utils__WEBPACK_IMPORTED_MODULE_0__.showBurgerIcon)(queue[i].foodRequest, customerContainer)
         domQueue.append(customerContainer);
     } 
 }
@@ -620,12 +622,17 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "dragAndDrop": () => (/* binding */ dragAndDrop)
 /* harmony export */ });
 /* harmony import */ var _game__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./game */ "./src/javascript/game.js");
+/* harmony import */ var _utils__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./utils */ "./src/javascript/utils.js");
+
 
 
 let dataObject = {
     foodObj: "null",
     drinkObj: "null",
-    id: "null"
+    id: "null",
+    getFood(){
+        return this.foodObj
+    }
 }
 
 function dragAndDrop(){
@@ -643,7 +650,6 @@ function dragAndDrop(){
         if(obj.classList.contains("draggable")){
             obj = obj.firstElementChild
         }
-        console.log("DRAG START", obj)
         if(obj.parentElement.classList.contains("buns")){
             const burger = new _game__WEBPACK_IMPORTED_MODULE_0__.Burger(0, 0, 0, 0);
             dataObject.foodObj = burger
@@ -662,20 +668,32 @@ function dragAndDrop(){
             let topping = e.target.dataset.ingredient;
             dataObject.foodObj[topping] = 1;
         }
-        
+        // console.log(dataObject.foodObj)
 }
     
     
     function handleDrop(e){
-        console.log("DROP")
         let dropZone = e.target;
-        if(!dropZone.classList.contains("drop-zone")) return;
+        if(!dropZone.closest(".drop-zone")) return;
+        if(dropZone.classList.contains("burger-icon")){
+            dropZone = dropZone.parentElement
+        }
 
         e.preventDefault();
-        let num = e.target.dataset.plate
-        _game__WEBPACK_IMPORTED_MODULE_0__.player[num].push(dataObject.foodObj)
-        console.log(dataObject.foodObj)
-
+        let num = dropZone.dataset.plate
+        console.log(`num = ${num}`)
+        if(_game__WEBPACK_IMPORTED_MODULE_0__.player[num].length === 0 || undefined){
+            _game__WEBPACK_IMPORTED_MODULE_0__.player[num].push(dataObject.foodObj)
+            console.log(dataObject.foodObj, "poop")
+        }else{
+            _game__WEBPACK_IMPORTED_MODULE_0__.player[num][0] = dataObject.foodObj
+            //player[num].splice(0, 0, dataObject.getFood())
+            console.log(dataObject.foodObj, "uwuwuw")
+        }
+        (0,_utils__WEBPACK_IMPORTED_MODULE_1__.clearPlate)(num);
+        (0,_utils__WEBPACK_IMPORTED_MODULE_1__.showBurgerIcon)(_game__WEBPACK_IMPORTED_MODULE_0__.player[num][0], dropZone)
+        // console.log(player[`${num}`][0])
+        console.log(`PLATE CONTENTS: `, _game__WEBPACK_IMPORTED_MODULE_0__.player)
     }
     
     
@@ -792,7 +810,8 @@ class Customer {
     }
 
     makeFoodRequest(){
-        let num = (0,_utils_js__WEBPACK_IMPORTED_MODULE_1__.generateRandom)(1, 4);
+        //let num = generateRandom(1, 4);
+        let num = 1;
         if (num === 1){
             this.foodRequest = "burger";
         }else if(num === 2){
@@ -820,8 +839,7 @@ class Customer {
         let lettuce = (0,_utils_js__WEBPACK_IMPORTED_MODULE_1__.generateRandom)(0, 1);
         let tomato = (0,_utils_js__WEBPACK_IMPORTED_MODULE_1__.generateRandom)(0, 1);
         let onion = (0,_utils_js__WEBPACK_IMPORTED_MODULE_1__.generateRandom)(0, 1);
-        let ketchup = (0,_utils_js__WEBPACK_IMPORTED_MODULE_1__.generateRandom)(0, 1);
-        this.foodRequest = new Burger(lettuce, tomato, onion, ketchup);
+        this.foodRequest = new Burger(lettuce, tomato, onion);
     }
 
     makeSushiRequest(){
@@ -888,11 +906,10 @@ class Plate{
 }
 
 class Burger {
-    constructor(lettuce, tomato, onion, ketchup){
+    constructor(lettuce, tomato, onion){
         this.lettuce = lettuce;
         this.tomato = tomato;
         this.onion = onion;
-        this.ketchup = ketchup
         this.name = "burger"
     }
 }
@@ -979,13 +996,34 @@ newGame.gameLoop(newGame)
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "clearPlate": () => (/* binding */ clearPlate),
 /* harmony export */   "displayCustomerSpecifics": () => (/* binding */ displayCustomerSpecifics),
 /* harmony export */   "generateRandom": () => (/* binding */ generateRandom),
 /* harmony export */   "makeEle": () => (/* binding */ makeEle),
 /* harmony export */   "nameArray": () => (/* binding */ nameArray),
 /* harmony export */   "randomName": () => (/* binding */ randomName),
-/* harmony export */   "setDifficulty": () => (/* binding */ setDifficulty)
+/* harmony export */   "setDifficulty": () => (/* binding */ setDifficulty),
+/* harmony export */   "showBurgerIcon": () => (/* binding */ showBurgerIcon)
 /* harmony export */ });
+/* harmony import */ var _images_burger_all_png__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../images/burger_all.png */ "./src/images/burger_all.png");
+/* harmony import */ var _images_burger_plain_png__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../images/burger_plain.png */ "./src/images/burger_plain.png");
+/* harmony import */ var _images_burger_buns_png__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../images/burger_buns.png */ "./src/images/burger_buns.png");
+/* harmony import */ var _images_burger_meat_tomato_png__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../images/burger_meat_tomato.png */ "./src/images/burger_meat_tomato.png");
+/* harmony import */ var _images_burger_meat_onion_png__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../images/burger_meat_onion.png */ "./src/images/burger_meat_onion.png");
+/* harmony import */ var _images_burger_meat_tomato_onion_png__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../images/burger_meat_tomato_onion.png */ "./src/images/burger_meat_tomato_onion.png");
+/* harmony import */ var _images_burger_meat_lettuce_png__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../images/burger_meat_lettuce.png */ "./src/images/burger_meat_lettuce.png");
+/* harmony import */ var _images_burger_meat_lettuce_onion_png__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../images/burger_meat_lettuce_onion.png */ "./src/images/burger_meat_lettuce_onion.png");
+/* harmony import */ var _images_burger_meat_tomato_lettuce_png__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../images/burger_meat_tomato_lettuce.png */ "./src/images/burger_meat_tomato_lettuce.png");
+
+
+
+
+
+
+
+
+
+
 function setDifficulty(){
     let num = (Math.random() * 9);
     let difficulty;
@@ -1038,6 +1076,162 @@ function displayCustomerSpecifics(obj, ele){
     return values
     //return keys.toString();
 }
+
+function clearPlate(i){
+    let plate = document.querySelector(`[data-plate="${i}"]`)
+    while(plate.firstChild){
+        plate.firstChild.remove();
+    }
+    console.log(plate)
+}
+
+function showBurgerIcon(obj, ele) {
+    let burgerPic = new Image();
+    burgerPic.classList.add("burger-icon")
+    if(ele.classList.contains("drop-zone")){
+        burgerPic.classList.add("drop-zone")
+    }
+    
+    if(
+        obj.lettuce == 1 &&
+        obj.tomato == 0 &&
+        obj.onion == 0){
+            burgerPic.src = _images_burger_meat_lettuce_png__WEBPACK_IMPORTED_MODULE_6__;
+        }
+    else if(
+        obj.lettuce == 0 &&
+        obj.tomato == 1 &&
+        obj.onion == 0){
+            burgerPic.src = _images_burger_meat_tomato_png__WEBPACK_IMPORTED_MODULE_3__;
+        }
+    else if(
+        obj.lettuce == 0 &&
+        obj.tomato == 0 &&
+        obj.onion == 1){
+            burgerPic.src = _images_burger_meat_onion_png__WEBPACK_IMPORTED_MODULE_4__;
+        }
+    else if(
+        obj.lettuce == 1 &&
+        obj.tomato == 1 &&
+        obj.onion == 0){
+            burgerPic.src = _images_burger_meat_tomato_lettuce_png__WEBPACK_IMPORTED_MODULE_8__;
+        }
+    else if(
+        obj.lettuce == 0 &&
+        obj.tomato == 1 &&
+        obj.onion == 1){
+            burgerPic.src = _images_burger_meat_tomato_onion_png__WEBPACK_IMPORTED_MODULE_5__;
+        }
+    else if(
+        obj.lettuce == 1 &&
+        obj.tomato == 0 &&
+        obj.onion == 1){
+            burgerPic.src = _images_burger_meat_lettuce_onion_png__WEBPACK_IMPORTED_MODULE_7__;
+        }
+    else if(
+        obj.lettuce == 1 &&
+        obj.tomato == 1 &&
+        obj.onion == 1){
+            burgerPic.src = _images_burger_all_png__WEBPACK_IMPORTED_MODULE_0__;
+        }
+    else if(
+        obj.lettuce == 0 &&
+        obj.tomato == 0 &&
+        obj.onion == 0){
+            burgerPic.src = _images_burger_plain_png__WEBPACK_IMPORTED_MODULE_1__;
+        }
+        ele.append(burgerPic);
+}
+
+/***/ }),
+
+/***/ "./src/images/burger_all.png":
+/*!***********************************!*\
+  !*** ./src/images/burger_all.png ***!
+  \***********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+module.exports = __webpack_require__.p + "ead3514f916dd375ff64.png";
+
+/***/ }),
+
+/***/ "./src/images/burger_buns.png":
+/*!************************************!*\
+  !*** ./src/images/burger_buns.png ***!
+  \************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+module.exports = __webpack_require__.p + "43f043f632ab4d39f4b7.png";
+
+/***/ }),
+
+/***/ "./src/images/burger_meat_lettuce.png":
+/*!********************************************!*\
+  !*** ./src/images/burger_meat_lettuce.png ***!
+  \********************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+module.exports = __webpack_require__.p + "5898a4c488f88bcea206.png";
+
+/***/ }),
+
+/***/ "./src/images/burger_meat_lettuce_onion.png":
+/*!**************************************************!*\
+  !*** ./src/images/burger_meat_lettuce_onion.png ***!
+  \**************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+module.exports = __webpack_require__.p + "778181891f69e13f3b45.png";
+
+/***/ }),
+
+/***/ "./src/images/burger_meat_onion.png":
+/*!******************************************!*\
+  !*** ./src/images/burger_meat_onion.png ***!
+  \******************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+module.exports = __webpack_require__.p + "da20b841d3cb311c9653.png";
+
+/***/ }),
+
+/***/ "./src/images/burger_meat_tomato.png":
+/*!*******************************************!*\
+  !*** ./src/images/burger_meat_tomato.png ***!
+  \*******************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+module.exports = __webpack_require__.p + "62a85d8609c7637f5b31.png";
+
+/***/ }),
+
+/***/ "./src/images/burger_meat_tomato_lettuce.png":
+/*!***************************************************!*\
+  !*** ./src/images/burger_meat_tomato_lettuce.png ***!
+  \***************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+module.exports = __webpack_require__.p + "c7fc679b9de7945fa120.png";
+
+/***/ }),
+
+/***/ "./src/images/burger_meat_tomato_onion.png":
+/*!*************************************************!*\
+  !*** ./src/images/burger_meat_tomato_onion.png ***!
+  \*************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+module.exports = __webpack_require__.p + "7681e60f80d2af2d4c6a.png";
+
+/***/ }),
+
+/***/ "./src/images/burger_plain.png":
+/*!*************************************!*\
+  !*** ./src/images/burger_plain.png ***!
+  \*************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+module.exports = __webpack_require__.p + "d196d7892b3445cc3a37.png";
 
 /***/ }),
 

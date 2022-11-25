@@ -1,5 +1,6 @@
-import {displayCustomerSpecifics, makeEle} from './utils'
+import {displayCustomerSpecifics, showBurgerIcon} from './utils'
 import CustomerIcon from '../images/customericon.png'
+
 
 export function clearDom(){
     const container = document.querySelector(".container");
@@ -54,6 +55,7 @@ export function makeCustomerDom(queue){
 
         customerContainer.append(customer, customerName)
         displayCustomerOrder(queue[i], customerContainer)
+        showBurgerIcon(queue[i].foodRequest, customerContainer)
         domQueue.append(customerContainer);
     } 
 }

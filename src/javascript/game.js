@@ -35,7 +35,8 @@ export class Customer {
     }
 
     makeFoodRequest(){
-        let num = generateRandom(1, 4);
+        //let num = generateRandom(1, 4);
+        let num = 1;
         if (num === 1){
             this.foodRequest = "burger";
         }else if(num === 2){
