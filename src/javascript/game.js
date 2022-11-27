@@ -1,6 +1,6 @@
 import { newGame } from './index.js'
 import {generateRandom, hasSameData, clearPlate} from './utils.js'
-import { clearQueue, makeCustomerDom } from './dom.js';
+import { clearQueue, makeCustomerDom, updateMoney } from './dom.js';
 
 export class Customer {
     constructor(difficulty, foodRequest, drinkRequest, name){
@@ -35,15 +35,15 @@ export class Customer {
     }
 
     makeFoodRequest(){
-        //let num = generateRandom(1, 4);
-        let num = 1;
-        if (num === 1){
+        let num = generateRandom(1, 7);
+        //let num = 1;
+        if (num <= 3){
             this.foodRequest = "burger";
-        }else if(num === 2){
+        }else if(num <= 5){
             this.foodRequest = "sushi";
-        }else if(num === 3){
+        }else if(num === 6){
             this.foodRequest = "pizza";
-        }else if(num === 4){
+        }else if(num === 7){
             this.foodRequest = "pastry";
         }
     }
@@ -173,12 +173,20 @@ export const player = {
     addMoney(amount){
         this.money += amount
     },
-    checkPlate(num, customer){
+    checkPlate(num, customer, newGame){
         console.log(this[num][0], customer.foodRequest);
         
         if(hasSameData(this[num][0], customer.foodRequest)){
             console.log("THANKS THATS RIGHT")
             clearPlate(num);
+            customer.removeFromQueue("null", newGame)
+            if(customer.difficulty === "easy"){
+                this.addMoney(5);
+            }else if(customer.difficulty === "medium"){
+                this.addMoney(10);
+            }else {this.addMoney(15);}
+            
+            updateMoney();
         }else {
             console.log("UM NO THATS NOT RIGHT LOL")
         }

@@ -21,7 +21,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".hello {\n    color: rgb(79, 234, 87);\n}\n\n.burger-container{\n    display: flex;\n    justify-content: center;\n    align-items: center;\n}\n\n.lettuce{\n    background-color: green;\n}\n\n.tomato{\n    background-color: red;\n    border-radius: 50%;\n}\n\n.ketchup{\n    background-color: red;\n    height:15px;\n}\n\n.onion{\n    background-color: purple;\n    border-radius: 50%;\n}\n\n.burger-topping{\n    height: 75px;\n    width: 75px\n}\n\n.customer-queue{\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    height: 150px;\n    width: 100vw;\n    border-bottom: 2px solid black;\n}\n\n.customer-container {\n    display: flex;\n    justify-content: center;\n    align-items: center;\n}\n\n.plate{\n    height: 100px;\n    width: 100px;\n    border: 2px solid green;\n    border-radius: 50%;\n}\n\n.burger-icon{\n    \n    height: 75px;\n    width: 75px; \n}", "",{"version":3,"sources":["webpack://./src/css/style.css"],"names":[],"mappings":"AAAA;IACI,uBAAuB;AAC3B;;AAEA;IACI,aAAa;IACb,uBAAuB;IACvB,mBAAmB;AACvB;;AAEA;IACI,uBAAuB;AAC3B;;AAEA;IACI,qBAAqB;IACrB,kBAAkB;AACtB;;AAEA;IACI,qBAAqB;IACrB,WAAW;AACf;;AAEA;IACI,wBAAwB;IACxB,kBAAkB;AACtB;;AAEA;IACI,YAAY;IACZ;AACJ;;AAEA;IACI,aAAa;IACb,uBAAuB;IACvB,mBAAmB;IACnB,aAAa;IACb,YAAY;IACZ,8BAA8B;AAClC;;AAEA;IACI,aAAa;IACb,uBAAuB;IACvB,mBAAmB;AACvB;;AAEA;IACI,aAAa;IACb,YAAY;IACZ,uBAAuB;IACvB,kBAAkB;AACtB;;AAEA;;IAEI,YAAY;IACZ,WAAW;AACf","sourcesContent":[".hello {\n    color: rgb(79, 234, 87);\n}\n\n.burger-container{\n    display: flex;\n    justify-content: center;\n    align-items: center;\n}\n\n.lettuce{\n    background-color: green;\n}\n\n.tomato{\n    background-color: red;\n    border-radius: 50%;\n}\n\n.ketchup{\n    background-color: red;\n    height:15px;\n}\n\n.onion{\n    background-color: purple;\n    border-radius: 50%;\n}\n\n.burger-topping{\n    height: 75px;\n    width: 75px\n}\n\n.customer-queue{\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    height: 150px;\n    width: 100vw;\n    border-bottom: 2px solid black;\n}\n\n.customer-container {\n    display: flex;\n    justify-content: center;\n    align-items: center;\n}\n\n.plate{\n    height: 100px;\n    width: 100px;\n    border: 2px solid green;\n    border-radius: 50%;\n}\n\n.burger-icon{\n    \n    height: 75px;\n    width: 75px; \n}"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, ".hello {\n    color: rgb(79, 234, 87);\n}\n\n.burger-container{\n    display: flex;\n    justify-content: center;\n    align-items: center;\n}\n\n.lettuce{\n    background-color: green;\n}\n\n.tomato{\n    background-color: red;\n    border-radius: 50%;\n}\n\n.ketchup{\n    background-color: red;\n    height:15px;\n}\n\n.onion{\n    background-color: purple;\n    border-radius: 50%;\n}\n\n.burger-topping{\n    height: 75px;\n    width: 75px\n}\n\n.customer-queue{\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    height: 150px;\n    width: 100vw;\n    border-bottom: 2px solid black;\n}\n\n.customer-container {\n    display: flex;\n    justify-content: center;\n    align-items: center;\n}\n\n.plate{\n    height: 100px;\n    width: 100px;\n    border: 2px solid green;\n    border-radius: 50%;\n}\n\n.plate-container{\n    display: flex;\n}\n\nbutton{\n    height: 50px;\n}\n\n.burger-icon{\n    \n    height: 75px;\n    width: 75px; \n}\n\n.money-counter{\n    font-size: 2rem;\n}\n\n.bottom{\n    display: flex;\n    gap: 50px;\n}", "",{"version":3,"sources":["webpack://./src/css/style.css"],"names":[],"mappings":"AAAA;IACI,uBAAuB;AAC3B;;AAEA;IACI,aAAa;IACb,uBAAuB;IACvB,mBAAmB;AACvB;;AAEA;IACI,uBAAuB;AAC3B;;AAEA;IACI,qBAAqB;IACrB,kBAAkB;AACtB;;AAEA;IACI,qBAAqB;IACrB,WAAW;AACf;;AAEA;IACI,wBAAwB;IACxB,kBAAkB;AACtB;;AAEA;IACI,YAAY;IACZ;AACJ;;AAEA;IACI,aAAa;IACb,uBAAuB;IACvB,mBAAmB;IACnB,aAAa;IACb,YAAY;IACZ,8BAA8B;AAClC;;AAEA;IACI,aAAa;IACb,uBAAuB;IACvB,mBAAmB;AACvB;;AAEA;IACI,aAAa;IACb,YAAY;IACZ,uBAAuB;IACvB,kBAAkB;AACtB;;AAEA;IACI,aAAa;AACjB;;AAEA;IACI,YAAY;AAChB;;AAEA;;IAEI,YAAY;IACZ,WAAW;AACf;;AAEA;IACI,eAAe;AACnB;;AAEA;IACI,aAAa;IACb,SAAS;AACb","sourcesContent":[".hello {\n    color: rgb(79, 234, 87);\n}\n\n.burger-container{\n    display: flex;\n    justify-content: center;\n    align-items: center;\n}\n\n.lettuce{\n    background-color: green;\n}\n\n.tomato{\n    background-color: red;\n    border-radius: 50%;\n}\n\n.ketchup{\n    background-color: red;\n    height:15px;\n}\n\n.onion{\n    background-color: purple;\n    border-radius: 50%;\n}\n\n.burger-topping{\n    height: 75px;\n    width: 75px\n}\n\n.customer-queue{\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    height: 150px;\n    width: 100vw;\n    border-bottom: 2px solid black;\n}\n\n.customer-container {\n    display: flex;\n    justify-content: center;\n    align-items: center;\n}\n\n.plate{\n    height: 100px;\n    width: 100px;\n    border: 2px solid green;\n    border-radius: 50%;\n}\n\n.plate-container{\n    display: flex;\n}\n\nbutton{\n    height: 50px;\n}\n\n.burger-icon{\n    \n    height: 75px;\n    width: 75px; \n}\n\n.money-counter{\n    font-size: 2rem;\n}\n\n.bottom{\n    display: flex;\n    gap: 50px;\n}"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -522,11 +522,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "clearQueue": () => (/* binding */ clearQueue),
 /* harmony export */   "deleteCustomerDom": () => (/* binding */ deleteCustomerDom),
 /* harmony export */   "makeBurgerStationDom": () => (/* binding */ makeBurgerStationDom),
-/* harmony export */   "makeCustomerDom": () => (/* binding */ makeCustomerDom)
+/* harmony export */   "makeCustomerDom": () => (/* binding */ makeCustomerDom),
+/* harmony export */   "updateMoney": () => (/* binding */ updateMoney)
 /* harmony export */ });
 /* harmony import */ var _utils__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./utils */ "./src/javascript/utils.js");
 /* harmony import */ var _flow_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./flow.js */ "./src/javascript/flow.js");
-/* harmony import */ var _images_customericon_png__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../images/customericon.png */ "./src/images/customericon.png");
+/* harmony import */ var _game__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./game */ "./src/javascript/game.js");
+/* harmony import */ var _images_customericon_png__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../images/customericon.png */ "./src/images/customericon.png");
+
 
 
 
@@ -577,7 +580,7 @@ function makeCustomerDom(newGame){
         customerContainer.classList.add("customer-container");
         customerContainer.classList.add("drop-zone")
         customerIcon.classList.add("customer-icon")
-        customerIcon.src = _images_customericon_png__WEBPACK_IMPORTED_MODULE_2__;
+        customerIcon.src = _images_customericon_png__WEBPACK_IMPORTED_MODULE_3__;
         customer.classList.add("customer")
         customer.append(customerIcon);
         customer.setAttribute('id', `${i}`)
@@ -610,6 +613,24 @@ function displayCustomerOrder(customer, parentEle){
 
 function deleteCustomerDom(i){
     document.getElementById(`${i}`).remove();
+}
+
+function clearMoney(){
+    const moneyContainer = document.querySelector(".money-container");
+    while(moneyContainer.firstChild){
+        moneyContainer.firstChild.remove();
+    }
+}
+
+function updateMoney(){
+    clearMoney();
+    const moneyContainer = document.querySelector(".money-container");
+
+    const counter = document.createElement("p");
+    counter.classList.add("money-counter")
+    counter.innerText = `$${_game__WEBPACK_IMPORTED_MODULE_2__.player.money}`
+
+    moneyContainer.append(counter);
 }
 
 /***/ }),
@@ -647,6 +668,9 @@ function dragAndDrop(newGame){
         document.body.addEventListener('dragstart', handleDragStart);
         document.body.addEventListener('drop', handleDrop.bind(newGame));
         document.body.addEventListener('dragover', handleOver);
+        document.querySelectorAll(".clear-button").forEach(i => {
+            i.addEventListener("click", handleClearButton)
+        })
 
     })
     
@@ -664,7 +688,7 @@ function dragAndDrop(newGame){
             const pizza = new _game__WEBPACK_IMPORTED_MODULE_0__.Pizza();
             dataObject.foodObj = pizza;
         }else if(obj.parentElement.classList.contains("sushi")){
-            const sushi = new _game__WEBPACK_IMPORTED_MODULE_0__.Sushi();
+            const sushi = new _game__WEBPACK_IMPORTED_MODULE_0__.Sushi(0, 0);
             dataObject.foodObj = sushi;
         }else if(obj.parentElement.classList.contains("pastry")){
             const pastry = new _game__WEBPACK_IMPORTED_MODULE_0__.Pastry();
@@ -697,7 +721,7 @@ function dragAndDrop(newGame){
             e.preventDefault();
             // this.publish('plateAdded', player[dataObject.plateNumber] )
             // player.checkPlate(player[dataObject.plateNumber], this.queue[dropZone.id])
-            _game__WEBPACK_IMPORTED_MODULE_0__.player.checkPlate(dataObject.plateNumber, this.queue[dropZone.id])
+            _game__WEBPACK_IMPORTED_MODULE_0__.player.checkPlate(dataObject.plateNumber, this.queue[dropZone.id], this)
         }else {
             e.preventDefault();
             let num = dropZone.dataset.plate
@@ -712,7 +736,7 @@ function dragAndDrop(newGame){
             }
             (0,_utils__WEBPACK_IMPORTED_MODULE_1__.clearPlate)(num);
             (0,_utils__WEBPACK_IMPORTED_MODULE_1__.showBurgerIcon)(_game__WEBPACK_IMPORTED_MODULE_0__.player[num][0], dropZone)
-            // console.log(player[`${num}`][0])
+            console.log(_game__WEBPACK_IMPORTED_MODULE_0__.player[num][0])
             
         }
 
@@ -723,6 +747,12 @@ function dragAndDrop(newGame){
     function handleOver(e){
     e.preventDefault();
     }
+}
+
+function handleClearButton(e){
+    let num = e.target.id;
+
+    (0,_utils__WEBPACK_IMPORTED_MODULE_1__.clearPlate)(num);
 }
 
 /***/ }),
@@ -851,15 +881,15 @@ class Customer {
     }
 
     makeFoodRequest(){
-        //let num = generateRandom(1, 4);
-        let num = 1;
-        if (num === 1){
+        let num = (0,_utils_js__WEBPACK_IMPORTED_MODULE_1__.generateRandom)(1, 7);
+        //let num = 1;
+        if (num <= 3){
             this.foodRequest = "burger";
-        }else if(num === 2){
+        }else if(num <= 5){
             this.foodRequest = "sushi";
-        }else if(num === 3){
+        }else if(num === 6){
             this.foodRequest = "pizza";
-        }else if(num === 4){
+        }else if(num === 7){
             this.foodRequest = "pastry";
         }
     }
@@ -989,12 +1019,20 @@ const player = {
     addMoney(amount){
         this.money += amount
     },
-    checkPlate(num, customer){
+    checkPlate(num, customer, newGame){
         console.log(this[num][0], customer.foodRequest);
         
         if((0,_utils_js__WEBPACK_IMPORTED_MODULE_1__.hasSameData)(this[num][0], customer.foodRequest)){
             console.log("THANKS THATS RIGHT")
             ;(0,_utils_js__WEBPACK_IMPORTED_MODULE_1__.clearPlate)(num);
+            customer.removeFromQueue("null", newGame)
+            if(customer.difficulty === "easy"){
+                this.addMoney(5);
+            }else if(customer.difficulty === "medium"){
+                this.addMoney(10);
+            }else {this.addMoney(15);}
+            
+            (0,_dom_js__WEBPACK_IMPORTED_MODULE_2__.updateMoney)();
         }else {
             console.log("UM NO THATS NOT RIGHT LOL")
         }
@@ -1041,6 +1079,7 @@ const newGame = new _flow__WEBPACK_IMPORTED_MODULE_3__.Game()
 newGame.gameLoop(newGame)
 //makeBurgerStationDom();
 ;(0,_draganddrop__WEBPACK_IMPORTED_MODULE_5__.dragAndDrop)(newGame)
+;(0,_dom__WEBPACK_IMPORTED_MODULE_4__.updateMoney)();
 
 /***/ }),
 
@@ -1071,6 +1110,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _images_burger_meat_lettuce_png__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../images/burger_meat_lettuce.png */ "./src/images/burger_meat_lettuce.png");
 /* harmony import */ var _images_burger_meat_lettuce_onion_png__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../images/burger_meat_lettuce_onion.png */ "./src/images/burger_meat_lettuce_onion.png");
 /* harmony import */ var _images_burger_meat_tomato_lettuce_png__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../images/burger_meat_tomato_lettuce.png */ "./src/images/burger_meat_tomato_lettuce.png");
+/* harmony import */ var _images_tuna_png__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../images/tuna.png */ "./src/images/tuna.png");
+/* harmony import */ var _images_salmon_png__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../images/salmon.png */ "./src/images/salmon.png");
+/* harmony import */ var _images_pastry_png__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../images/pastry.png */ "./src/images/pastry.png");
+/* harmony import */ var _images_pizza_png__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../images/pizza.png */ "./src/images/pizza.png");
+
+
+
+
+
 
 
 
@@ -1196,6 +1244,22 @@ function showBurgerIcon(obj, ele) {
         obj.onion == 0){
             burgerPic.src = _images_burger_plain_png__WEBPACK_IMPORTED_MODULE_1__;
         }
+        else if(
+        obj.name === "sushi" && obj.salmon == 1){
+        burgerPic.src = _images_salmon_png__WEBPACK_IMPORTED_MODULE_10__;
+        } 
+        else if(
+        obj.name === "sushi" && obj.tuna == 1){
+            burgerPic.src = _images_tuna_png__WEBPACK_IMPORTED_MODULE_9__
+        }
+        else if(obj.name === "pastry"){
+            burgerPic.src = _images_pastry_png__WEBPACK_IMPORTED_MODULE_11__
+        }
+        else if(obj.name === "pizza"){
+            burgerPic.src = _images_pizza_png__WEBPACK_IMPORTED_MODULE_12__
+        }
+
+
         ele.append(burgerPic);
 }
 
@@ -1299,6 +1363,46 @@ module.exports = __webpack_require__.p + "d196d7892b3445cc3a37.png";
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 module.exports = __webpack_require__.p + "c79eb9f1b9472dd3c0ba.png";
+
+/***/ }),
+
+/***/ "./src/images/pastry.png":
+/*!*******************************!*\
+  !*** ./src/images/pastry.png ***!
+  \*******************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+module.exports = __webpack_require__.p + "9c12bd97a08ac4ea1797.png";
+
+/***/ }),
+
+/***/ "./src/images/pizza.png":
+/*!******************************!*\
+  !*** ./src/images/pizza.png ***!
+  \******************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+module.exports = __webpack_require__.p + "6d04321ba50903c61f80.png";
+
+/***/ }),
+
+/***/ "./src/images/salmon.png":
+/*!*******************************!*\
+  !*** ./src/images/salmon.png ***!
+  \*******************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+module.exports = __webpack_require__.p + "59e50ce66627b85505ff.png";
+
+/***/ }),
+
+/***/ "./src/images/tuna.png":
+/*!*****************************!*\
+  !*** ./src/images/tuna.png ***!
+  \*****************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+module.exports = __webpack_require__.p + "33d552886882c0872488.png";
 
 /***/ })
 

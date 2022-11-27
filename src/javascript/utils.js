@@ -7,6 +7,11 @@ import BurgerTomatoOnion from '../images/burger_meat_tomato_onion.png';
 import BurgerMeatLettuce from '../images/burger_meat_lettuce.png';
 import BurgerMeatLettuceOnion from '../images/burger_meat_lettuce_onion.png';
 import BurgerMeatTomatoLettuce from '../images/burger_meat_tomato_lettuce.png';
+import Tuna from '../images/tuna.png';
+import Salmon from '../images/salmon.png';
+import Pastry from '../images/pastry.png';
+import Pizza from '../images/pizza.png';
+
 
 export function setDifficulty(){
     let num = (Math.random() * 9);
@@ -123,5 +128,21 @@ export function showBurgerIcon(obj, ele) {
         obj.onion == 0){
             burgerPic.src = BurgerPlain;
         }
+        else if(
+        obj.name === "sushi" && obj.salmon == 1){
+        burgerPic.src = Salmon;
+        } 
+        else if(
+        obj.name === "sushi" && obj.tuna == 1){
+            burgerPic.src = Tuna
+        }
+        else if(obj.name === "pastry"){
+            burgerPic.src = Pastry
+        }
+        else if(obj.name === "pizza"){
+            burgerPic.src = Pizza
+        }
+
+
         ele.append(burgerPic);
 }

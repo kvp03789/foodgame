@@ -18,6 +18,9 @@ export function dragAndDrop(newGame){
         document.body.addEventListener('dragstart', handleDragStart);
         document.body.addEventListener('drop', handleDrop.bind(newGame));
         document.body.addEventListener('dragover', handleOver);
+        document.querySelectorAll(".clear-button").forEach(i => {
+            i.addEventListener("click", handleClearButton)
+        })
 
     })
     
@@ -35,7 +38,7 @@ export function dragAndDrop(newGame){
             const pizza = new Pizza();
             dataObject.foodObj = pizza;
         }else if(obj.parentElement.classList.contains("sushi")){
-            const sushi = new Sushi();
+            const sushi = new Sushi(0, 0);
             dataObject.foodObj = sushi;
         }else if(obj.parentElement.classList.contains("pastry")){
             const pastry = new Pastry();
@@ -68,7 +71,7 @@ export function dragAndDrop(newGame){
             e.preventDefault();
             // this.publish('plateAdded', player[dataObject.plateNumber] )
             // player.checkPlate(player[dataObject.plateNumber], this.queue[dropZone.id])
-            player.checkPlate(dataObject.plateNumber, this.queue[dropZone.id])
+            player.checkPlate(dataObject.plateNumber, this.queue[dropZone.id], this)
         }else {
             e.preventDefault();
             let num = dropZone.dataset.plate
@@ -83,7 +86,7 @@ export function dragAndDrop(newGame){
             }
             clearPlate(num);
             showBurgerIcon(player[num][0], dropZone)
-            // console.log(player[`${num}`][0])
+            console.log(player[num][0])
             
         }
 
@@ -94,4 +97,10 @@ export function dragAndDrop(newGame){
     function handleOver(e){
     e.preventDefault();
     }
+}
+
+function handleClearButton(e){
+    let num = e.target.id;
+
+    clearPlate(num);
 }

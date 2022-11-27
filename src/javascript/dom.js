@@ -1,5 +1,6 @@
 import {displayCustomerSpecifics, showBurgerIcon} from './utils'
 import {pubSub} from './flow.js';
+import { player } from './game';
 import CustomerIcon from '../images/customericon.png'
 
 
@@ -81,4 +82,22 @@ function displayCustomerOrder(customer, parentEle){
 
 export function deleteCustomerDom(i){
     document.getElementById(`${i}`).remove();
+}
+
+function clearMoney(){
+    const moneyContainer = document.querySelector(".money-container");
+    while(moneyContainer.firstChild){
+        moneyContainer.firstChild.remove();
+    }
+}
+
+export function updateMoney(){
+    clearMoney();
+    const moneyContainer = document.querySelector(".money-container");
+
+    const counter = document.createElement("p");
+    counter.classList.add("money-counter")
+    counter.innerText = `$${player.money}`
+
+    moneyContainer.append(counter);
 }

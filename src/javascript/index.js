@@ -2,7 +2,7 @@ import '../css/style.css';
 import { nameArray } from './utils';
 import { Customer, Plate, player } from './game';
 import { Game } from './flow';
-import { makeBurgerStationDom } from './dom';
+import { updateMoney } from './dom';
 import { dragAndDrop } from './draganddrop';
 // let difficulty = setDifficulty();
 // const newCustomer = new Customer(difficulty, "null", "null");
@@ -17,3 +17,4 @@ const newGame = new Game()
 newGame.gameLoop(newGame)
 //makeBurgerStationDom();
 dragAndDrop(newGame)
+updateMoney();
