@@ -8,7 +8,8 @@
 </head>
 <body>
 
-    <div class="container">
+<div class="container">
+    <div class="top">
         <div class="burger-container">
 
         </div>
@@ -16,13 +17,23 @@
         <div class="customer-queue">
             
         </div>
-
+    </div>
+    <div class="bottom">
         <div class="counter">
             <div class="plate-container">
                 <div class="plate drop-zone draggable" draggable="true" data-plate="1"></div>
-                <div class="plate drop-zone draggable" draggable="true" data-plate="2"></div>
-                <div class="plate drop-zone draggable" draggable="true" data-plate="3"></div>
+                <button class="clear-button" id="1">clear plate</button>
             </div>
+            <div class="plate-container">
+                <div class="plate drop-zone draggable" draggable="true" data-plate="2"></div>
+                <button class="clear-button" id="2">clear plate</button>
+            </div>
+            <div class="plate-container">    
+                <div class="plate drop-zone draggable" draggable="true" data-plate="3"></div>
+                <button class="clear-button" id="3">clear plate</button>
+            </div>
+        </div>    
+            
             <div class="ingredients-container">
                 <div class="ingredient draggable buns" draggable="true">
                     <p>BUNS</p>
@@ -47,8 +58,12 @@
                     <p>SUSHI</p>
                 </div>
             </div>
-        </div>
+            <div class="money-container">
+                
+            </div>
+        
     </div>
+</div>
     <script src="bundle.js">
 
     </script>
