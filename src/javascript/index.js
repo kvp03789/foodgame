@@ -16,4 +16,4 @@ import { dragAndDrop } from './draganddrop';
 const newGame = new Game()
 newGame.gameLoop(newGame)
 //makeBurgerStationDom();
-dragAndDrop()
+dragAndDrop(newGame)

@@ -1,6 +1,6 @@
 import { newGame } from './index.js'
-import {generateRandom} from './utils.js'
-import { clearQueue, makeCustomerDom } from './dom.js'
+import {generateRandom, hasSameData, clearPlate} from './utils.js'
+import { clearQueue, makeCustomerDom } from './dom.js';
 
 export class Customer {
     constructor(difficulty, foodRequest, drinkRequest, name){
@@ -84,13 +84,17 @@ export class Customer {
         this.foodRequest = new Pastry();
     }
 
-    checkPlate(plate, player){
-        if(plate.contents.some(i => i === this.foodRequest) && plate.contents.some(i => i === this.drinkRequest)){
+    checkPlate(plate){
+        console.log(this)
+        if(plate.some(i => i === this.foodRequest) && plate.some(i => i === this.drinkRequest)){
             player.addMoney(10);
-        }else if(plate.contents.some(i => i === this.foodRequest) || plate.contents.some(i => i === this.drinkRequest)){
-            player.addMoney(5)
+            console.log("THANKS THATS RIGHT")
+        }else if(plate.some(i => i === this.foodRequest) || plate.some(i => i === this.drinkRequest)){
+            player.addMoney(5);
+            console.log("THANKS I GUESS")
         }else{
             player.addMoney(0);
+            console.log("YOU IDIOT THATS WRONG")
         }
     }
 
@@ -107,7 +111,7 @@ export class Customer {
     removeFromQueue(index, newGame){
         newGame.queue.splice(newGame.queue.indexOf(this), 1);
         clearQueue();
-        makeCustomerDom(newGame.queue);
+        makeCustomerDom(newGame);
         console.log(`${this.name} is fed up and is leaving T-T`, newGame.queue) 
     }
 
@@ -168,7 +172,18 @@ export const player = {
     3: [],
     addMoney(amount){
         this.money += amount
+    },
+    checkPlate(num, customer){
+        console.log(this[num][0], customer.foodRequest);
+        
+        if(hasSameData(this[num][0], customer.foodRequest)){
+            console.log("THANKS THATS RIGHT")
+            clearPlate(num);
+        }else {
+            console.log("UM NO THATS NOT RIGHT LOL")
+        }
     }
+
 }
 
     

@@ -1,20 +1,22 @@
 import {Burger, Pizza, Sushi, player, Pastry} from './game'
 import {clearPlate, showBurgerIcon} from './utils';
+import {Game} from './flow.js';
 
 let dataObject = {
     foodObj: "null",
     drinkObj: "null",
     id: "null",
+    plateNumber: "null",
     getFood(){
         return this.foodObj
     }
 }
 
-export function dragAndDrop(){
+export function dragAndDrop(newGame){
     document.addEventListener("DOMContentLoaded", () => {
 
         document.body.addEventListener('dragstart', handleDragStart);
-        document.body.addEventListener('drop', handleDrop);
+        document.body.addEventListener('drop', handleDrop.bind(newGame));
         document.body.addEventListener('dragover', handleOver);
 
     })
@@ -28,7 +30,7 @@ export function dragAndDrop(){
         if(obj.parentElement.classList.contains("buns")){
             const burger = new Burger(0, 0, 0, 0);
             dataObject.foodObj = burger
-            console.log(burger, dataObject)
+            //console.log(burger, dataObject)
         }else if(obj.parentElement.classList.contains("pizza")){
             const pizza = new Pizza();
             dataObject.foodObj = pizza;
@@ -43,32 +45,49 @@ export function dragAndDrop(){
             let topping = e.target.dataset.ingredient;
             dataObject.foodObj[topping] = 1;
         }
+        else if(obj.parentElement.closest(".plate")){
+            let plateNum = e.target.closest(".plate").dataset.plate;
+            dataObject.plateNumber = plateNum
+            //console.log(plateNum)
+        }
         // console.log(dataObject.foodObj)
 }
     
     
-    function handleDrop(e){
+    function handleDrop(e, newGame){
         let dropZone = e.target;
         if(!dropZone.closest(".drop-zone")) return;
         if(dropZone.classList.contains("burger-icon")){
             dropZone = dropZone.parentElement
         }
-
-        e.preventDefault();
-        let num = dropZone.dataset.plate
-        console.log(`num = ${num}`)
-        if(player[num].length === 0 || undefined){
-            player[num].push(dataObject.foodObj)
-            console.log(dataObject.foodObj, "poop")
-        }else{
-            player[num][0] = dataObject.foodObj
-            //player[num].splice(0, 0, dataObject.getFood())
-            console.log(dataObject.foodObj, "uwuwuw")
+        if(dropZone.classList.contains("customer-container")){
+            dropZone = dropZone.firstElementChild;
         }
-        clearPlate(num);
-        showBurgerIcon(player[num][0], dropZone)
-        // console.log(player[`${num}`][0])
-        console.log(`PLATE CONTENTS: `, player)
+
+        if(dropZone.closest(".customer-container")){
+            e.preventDefault();
+            // this.publish('plateAdded', player[dataObject.plateNumber] )
+            // player.checkPlate(player[dataObject.plateNumber], this.queue[dropZone.id])
+            player.checkPlate(dataObject.plateNumber, this.queue[dropZone.id])
+        }else {
+            e.preventDefault();
+            let num = dropZone.dataset.plate
+            //console.log(`num = ${num}`)
+            if(player[num].length === 0 || undefined){
+                player[num].push(dataObject.foodObj)
+                //console.log(dataObject.foodObj, "asdf")
+            }else{
+                player[num][0] = dataObject.foodObj
+                //player[num].splice(0, 0, dataObject.getFood())
+                //console.log(dataObject.foodObj, "uwuwuw")
+            }
+            clearPlate(num);
+            showBurgerIcon(player[num][0], dropZone)
+            // console.log(player[`${num}`][0])
+            
+        }
+
+        
     }
     
     

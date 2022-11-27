@@ -45,20 +45,9 @@ export const randomName = function(queue){
     randomName(queue)
 }
 
-export function displayCustomerSpecifics(obj, ele){
-    // let para;
-    // for(let i in obj){
-    //     if(i === 1){
-    //         para += ` ${i}`
-    //     }
-    // }
-    // return para
-    //console.log(obj.filter)
-    //const keys = Object.keys(obj);
-    //const filtered = keys.filter(k => obj[k] === true)
+export function displayCustomerSpecifics(obj){
     const values = Object.keys(obj).filter(key => obj[key]);
     return values
-    //return keys.toString();
 }
 
 export function clearPlate(i){
@@ -67,6 +56,16 @@ export function clearPlate(i){
         plate.firstChild.remove();
     }
     console.log(plate)
+}
+
+export function hasSameData(obj1, obj2){
+    // const obj1Length = Object.keys(obj1).length;
+    // const obj2Length = Object.keys(obj2).length;
+    // if(obj1Length === obj2Length) {
+    //     return Object.keys(obj1).every(key => {
+    //             obj2.hasOwnProperty(key) && obj1[key] === obj2[key]})
+    // }else return false
+    return JSON.stringify(obj1) === JSON.stringify(obj2)
 }
 
 export function showBurgerIcon(obj, ele) {

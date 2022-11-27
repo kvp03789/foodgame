@@ -525,7 +525,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "makeCustomerDom": () => (/* binding */ makeCustomerDom)
 /* harmony export */ });
 /* harmony import */ var _utils__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./utils */ "./src/javascript/utils.js");
-/* harmony import */ var _images_customericon_png__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../images/customericon.png */ "./src/images/customericon.png");
+/* harmony import */ var _flow_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./flow.js */ "./src/javascript/flow.js");
+/* harmony import */ var _images_customericon_png__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../images/customericon.png */ "./src/images/customericon.png");
+
 
 
 
@@ -563,28 +565,29 @@ function makeBurgerStationDom(){
     container.append(burgerContainer)
 }
 
-function makeCustomerDom(queue){
-    const container = document.querySelector(".container");
+function makeCustomerDom(newGame){
     const domQueue = document.querySelector(".customer-queue");
     
-    for(let i = 0; i < queue.length; i++){
+    for(let i = 0; i < newGame.queue.length; i++){
         const customerContainer = document.createElement("div");
         const customer = document.createElement("div");
         const customerName = document.createElement("h3");
         const customerIcon = new Image();
 
-        customerContainer.classList.add("customer-container")
+        customerContainer.classList.add("customer-container");
+        customerContainer.classList.add("drop-zone")
         customerIcon.classList.add("customer-icon")
-        customerIcon.src = _images_customericon_png__WEBPACK_IMPORTED_MODULE_1__;
+        customerIcon.src = _images_customericon_png__WEBPACK_IMPORTED_MODULE_2__;
         customer.classList.add("customer")
         customer.append(customerIcon);
         customer.setAttribute('id', `${i}`)
-        customerName.innerText = `${queue[i].name}`
+        customerName.innerText = `${newGame.queue[i].name}`
 
         customerContainer.append(customer, customerName)
-        displayCustomerOrder(queue[i], customerContainer)
-        ;(0,_utils__WEBPACK_IMPORTED_MODULE_0__.showBurgerIcon)(queue[i].foodRequest, customerContainer)
+        //displayCustomerOrder(newGame.queue[i], customerContainer)
+        ;(0,_utils__WEBPACK_IMPORTED_MODULE_0__.showBurgerIcon)(newGame.queue[i].foodRequest, customerContainer)
         domQueue.append(customerContainer);
+        // newGame.subscribe('plateAdded', newGame.queue[i].checkPlate)
     } 
 }
 
@@ -623,6 +626,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _game__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./game */ "./src/javascript/game.js");
 /* harmony import */ var _utils__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./utils */ "./src/javascript/utils.js");
+/* harmony import */ var _flow_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./flow.js */ "./src/javascript/flow.js");
+
 
 
 
@@ -630,16 +635,17 @@ let dataObject = {
     foodObj: "null",
     drinkObj: "null",
     id: "null",
+    plateNumber: "null",
     getFood(){
         return this.foodObj
     }
 }
 
-function dragAndDrop(){
+function dragAndDrop(newGame){
     document.addEventListener("DOMContentLoaded", () => {
 
         document.body.addEventListener('dragstart', handleDragStart);
-        document.body.addEventListener('drop', handleDrop);
+        document.body.addEventListener('drop', handleDrop.bind(newGame));
         document.body.addEventListener('dragover', handleOver);
 
     })
@@ -653,7 +659,7 @@ function dragAndDrop(){
         if(obj.parentElement.classList.contains("buns")){
             const burger = new _game__WEBPACK_IMPORTED_MODULE_0__.Burger(0, 0, 0, 0);
             dataObject.foodObj = burger
-            console.log(burger, dataObject)
+            //console.log(burger, dataObject)
         }else if(obj.parentElement.classList.contains("pizza")){
             const pizza = new _game__WEBPACK_IMPORTED_MODULE_0__.Pizza();
             dataObject.foodObj = pizza;
@@ -668,32 +674,49 @@ function dragAndDrop(){
             let topping = e.target.dataset.ingredient;
             dataObject.foodObj[topping] = 1;
         }
+        else if(obj.parentElement.closest(".plate")){
+            let plateNum = e.target.closest(".plate").dataset.plate;
+            dataObject.plateNumber = plateNum
+            //console.log(plateNum)
+        }
         // console.log(dataObject.foodObj)
 }
     
     
-    function handleDrop(e){
+    function handleDrop(e, newGame){
         let dropZone = e.target;
         if(!dropZone.closest(".drop-zone")) return;
         if(dropZone.classList.contains("burger-icon")){
             dropZone = dropZone.parentElement
         }
-
-        e.preventDefault();
-        let num = dropZone.dataset.plate
-        console.log(`num = ${num}`)
-        if(_game__WEBPACK_IMPORTED_MODULE_0__.player[num].length === 0 || undefined){
-            _game__WEBPACK_IMPORTED_MODULE_0__.player[num].push(dataObject.foodObj)
-            console.log(dataObject.foodObj, "poop")
-        }else{
-            _game__WEBPACK_IMPORTED_MODULE_0__.player[num][0] = dataObject.foodObj
-            //player[num].splice(0, 0, dataObject.getFood())
-            console.log(dataObject.foodObj, "uwuwuw")
+        if(dropZone.classList.contains("customer-container")){
+            dropZone = dropZone.firstElementChild;
         }
-        (0,_utils__WEBPACK_IMPORTED_MODULE_1__.clearPlate)(num);
-        (0,_utils__WEBPACK_IMPORTED_MODULE_1__.showBurgerIcon)(_game__WEBPACK_IMPORTED_MODULE_0__.player[num][0], dropZone)
-        // console.log(player[`${num}`][0])
-        console.log(`PLATE CONTENTS: `, _game__WEBPACK_IMPORTED_MODULE_0__.player)
+
+        if(dropZone.closest(".customer-container")){
+            e.preventDefault();
+            // this.publish('plateAdded', player[dataObject.plateNumber] )
+            // player.checkPlate(player[dataObject.plateNumber], this.queue[dropZone.id])
+            _game__WEBPACK_IMPORTED_MODULE_0__.player.checkPlate(dataObject.plateNumber, this.queue[dropZone.id])
+        }else {
+            e.preventDefault();
+            let num = dropZone.dataset.plate
+            //console.log(`num = ${num}`)
+            if(_game__WEBPACK_IMPORTED_MODULE_0__.player[num].length === 0 || undefined){
+                _game__WEBPACK_IMPORTED_MODULE_0__.player[num].push(dataObject.foodObj)
+                //console.log(dataObject.foodObj, "asdf")
+            }else{
+                _game__WEBPACK_IMPORTED_MODULE_0__.player[num][0] = dataObject.foodObj
+                //player[num].splice(0, 0, dataObject.getFood())
+                //console.log(dataObject.foodObj, "uwuwuw")
+            }
+            (0,_utils__WEBPACK_IMPORTED_MODULE_1__.clearPlate)(num);
+            (0,_utils__WEBPACK_IMPORTED_MODULE_1__.showBurgerIcon)(_game__WEBPACK_IMPORTED_MODULE_0__.player[num][0], dropZone)
+            // console.log(player[`${num}`][0])
+            
+        }
+
+        
     }
     
     
@@ -725,6 +748,7 @@ __webpack_require__.r(__webpack_exports__);
 class Game{
     constructor(){
         this.queue = new Array()
+        this.subscribers = {}
     }
 
     addNewCustomer(newGame){
@@ -738,18 +762,35 @@ class Game{
             // setTimeout(newCustomer.makeOrder, 1000)
             newCustomer.makeOrder();
             newCustomer.startTimer(i, newGame);
+            // newGame.subscribe('plateAdded', newCustomer.checkPlate.bind(newCustomer))
             (0,_dom__WEBPACK_IMPORTED_MODULE_2__.clearQueue)()
-            ;(0,_dom__WEBPACK_IMPORTED_MODULE_2__.makeCustomerDom)(newGame.queue);
+            ;(0,_dom__WEBPACK_IMPORTED_MODULE_2__.makeCustomerDom)(newGame);
+            
             }else console.log("queue full")
         }
     
         gameLoop(newGame){
-            setInterval(() => {this.addNewCustomer(newGame);}, 6000);
+            setInterval(() => {this.addNewCustomer(newGame, this.pubSub);}, 6000);
             //this.addNewCustomer();
+        }
+
+        publish(eventName, data){
+            if(!Array.isArray(this.subscribers[eventName])){
+                return
+            }
+            this.subscribers[eventName].forEach((callback) => {
+                callback(data);
+            })
+        }
+
+        subscribe(eventName, callback){
+            if(!Array.isArray(this.subscribers[eventName])){
+                this.subscribers[eventName] = [];
+            }
+            this.subscribers[eventName].push(callback)
         }
 }
 
-    
 
 
 /***/ }),
@@ -859,13 +900,17 @@ class Customer {
         this.foodRequest = new Pastry();
     }
 
-    checkPlate(plate, player){
-        if(plate.contents.some(i => i === this.foodRequest) && plate.contents.some(i => i === this.drinkRequest)){
+    checkPlate(plate){
+        console.log(this)
+        if(plate.some(i => i === this.foodRequest) && plate.some(i => i === this.drinkRequest)){
             player.addMoney(10);
-        }else if(plate.contents.some(i => i === this.foodRequest) || plate.contents.some(i => i === this.drinkRequest)){
-            player.addMoney(5)
+            console.log("THANKS THATS RIGHT")
+        }else if(plate.some(i => i === this.foodRequest) || plate.some(i => i === this.drinkRequest)){
+            player.addMoney(5);
+            console.log("THANKS I GUESS")
         }else{
             player.addMoney(0);
+            console.log("YOU IDIOT THATS WRONG")
         }
     }
 
@@ -882,7 +927,7 @@ class Customer {
     removeFromQueue(index, newGame){
         newGame.queue.splice(newGame.queue.indexOf(this), 1);
         (0,_dom_js__WEBPACK_IMPORTED_MODULE_2__.clearQueue)();
-        (0,_dom_js__WEBPACK_IMPORTED_MODULE_2__.makeCustomerDom)(newGame.queue);
+        (0,_dom_js__WEBPACK_IMPORTED_MODULE_2__.makeCustomerDom)(newGame);
         console.log(`${this.name} is fed up and is leaving T-T`, newGame.queue) 
     }
 
@@ -943,7 +988,18 @@ const player = {
     3: [],
     addMoney(amount){
         this.money += amount
+    },
+    checkPlate(num, customer){
+        console.log(this[num][0], customer.foodRequest);
+        
+        if((0,_utils_js__WEBPACK_IMPORTED_MODULE_1__.hasSameData)(this[num][0], customer.foodRequest)){
+            console.log("THANKS THATS RIGHT")
+            ;(0,_utils_js__WEBPACK_IMPORTED_MODULE_1__.clearPlate)(num);
+        }else {
+            console.log("UM NO THATS NOT RIGHT LOL")
+        }
     }
+
 }
 
     
@@ -984,7 +1040,7 @@ __webpack_require__.r(__webpack_exports__);
 const newGame = new _flow__WEBPACK_IMPORTED_MODULE_3__.Game()
 newGame.gameLoop(newGame)
 //makeBurgerStationDom();
-;(0,_draganddrop__WEBPACK_IMPORTED_MODULE_5__.dragAndDrop)()
+;(0,_draganddrop__WEBPACK_IMPORTED_MODULE_5__.dragAndDrop)(newGame)
 
 /***/ }),
 
@@ -999,6 +1055,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "clearPlate": () => (/* binding */ clearPlate),
 /* harmony export */   "displayCustomerSpecifics": () => (/* binding */ displayCustomerSpecifics),
 /* harmony export */   "generateRandom": () => (/* binding */ generateRandom),
+/* harmony export */   "hasSameData": () => (/* binding */ hasSameData),
 /* harmony export */   "makeEle": () => (/* binding */ makeEle),
 /* harmony export */   "nameArray": () => (/* binding */ nameArray),
 /* harmony export */   "randomName": () => (/* binding */ randomName),
@@ -1061,20 +1118,9 @@ const randomName = function(queue){
     randomName(queue)
 }
 
-function displayCustomerSpecifics(obj, ele){
-    // let para;
-    // for(let i in obj){
-    //     if(i === 1){
-    //         para += ` ${i}`
-    //     }
-    // }
-    // return para
-    //console.log(obj.filter)
-    //const keys = Object.keys(obj);
-    //const filtered = keys.filter(k => obj[k] === true)
+function displayCustomerSpecifics(obj){
     const values = Object.keys(obj).filter(key => obj[key]);
     return values
-    //return keys.toString();
 }
 
 function clearPlate(i){
@@ -1083,6 +1129,16 @@ function clearPlate(i){
         plate.firstChild.remove();
     }
     console.log(plate)
+}
+
+function hasSameData(obj1, obj2){
+    // const obj1Length = Object.keys(obj1).length;
+    // const obj2Length = Object.keys(obj2).length;
+    // if(obj1Length === obj2Length) {
+    //     return Object.keys(obj1).every(key => {
+    //             obj2.hasOwnProperty(key) && obj1[key] === obj2[key]})
+    // }else return false
+    return JSON.stringify(obj1) === JSON.stringify(obj2)
 }
 
 function showBurgerIcon(obj, ele) {
@@ -1142,6 +1198,7 @@ function showBurgerIcon(obj, ele) {
         }
         ele.append(burgerPic);
 }
+
 
 /***/ }),
 

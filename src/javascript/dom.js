@@ -1,4 +1,5 @@
 import {displayCustomerSpecifics, showBurgerIcon} from './utils'
+import {pubSub} from './flow.js';
 import CustomerIcon from '../images/customericon.png'
 
 
@@ -35,28 +36,29 @@ export function makeBurgerStationDom(){
     container.append(burgerContainer)
 }
 
-export function makeCustomerDom(queue){
-    const container = document.querySelector(".container");
+export function makeCustomerDom(newGame){
     const domQueue = document.querySelector(".customer-queue");
     
-    for(let i = 0; i < queue.length; i++){
+    for(let i = 0; i < newGame.queue.length; i++){
         const customerContainer = document.createElement("div");
         const customer = document.createElement("div");
         const customerName = document.createElement("h3");
         const customerIcon = new Image();
 
-        customerContainer.classList.add("customer-container")
+        customerContainer.classList.add("customer-container");
+        customerContainer.classList.add("drop-zone")
         customerIcon.classList.add("customer-icon")
         customerIcon.src = CustomerIcon;
         customer.classList.add("customer")
         customer.append(customerIcon);
         customer.setAttribute('id', `${i}`)
-        customerName.innerText = `${queue[i].name}`
+        customerName.innerText = `${newGame.queue[i].name}`
 
         customerContainer.append(customer, customerName)
-        displayCustomerOrder(queue[i], customerContainer)
-        showBurgerIcon(queue[i].foodRequest, customerContainer)
+        //displayCustomerOrder(newGame.queue[i], customerContainer)
+        showBurgerIcon(newGame.queue[i].foodRequest, customerContainer)
         domQueue.append(customerContainer);
+        // newGame.subscribe('plateAdded', newGame.queue[i].checkPlate)
     } 
 }
 
