@@ -788,7 +788,7 @@ class Game{
             const newCustomer = new _game__WEBPACK_IMPORTED_MODULE_0__.Customer(difficulty, "null", "null", name);
             this.queue.push(newCustomer);
             let i = this.queue.indexOf(newCustomer)
-            console.log(`${newCustomer.name} walked in the door`, this.queue)
+            console.log(`${newCustomer.name} (${newCustomer.difficulty}) walked in the door`, this.queue)
             // setTimeout(newCustomer.makeOrder, 1000)
             newCustomer.makeOrder();
             newCustomer.startTimer(i, newGame);
