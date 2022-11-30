@@ -11,6 +11,7 @@ import Tuna from '../images/tuna.png';
 import Salmon from '../images/salmon.png';
 import Pastry from '../images/pastry.png';
 import Pizza from '../images/pizza.png';
+import Rice from '../images/rice.png'
 
 
 export function setDifficulty(){
@@ -128,6 +129,10 @@ export function showBurgerIcon(obj, ele) {
         obj.onion == 0){
             burgerPic.src = BurgerPlain;
         }
+        else if(obj.name === "sushi" && obj.salmon === 0 && obj.tuna === 0){
+            burgerPic.src = Rice
+        }
+
         else if(
         obj.name === "sushi" && obj.salmon == 1){
         burgerPic.src = Salmon;

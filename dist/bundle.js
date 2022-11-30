@@ -687,7 +687,7 @@ function dragAndDrop(newGame){
         }else if(obj.parentElement.classList.contains("pizza")){
             const pizza = new _game__WEBPACK_IMPORTED_MODULE_0__.Pizza();
             dataObject.foodObj = pizza;
-        }else if(obj.parentElement.classList.contains("sushi")){
+        }else if(obj.parentElement.classList.contains("rice")){
             const sushi = new _game__WEBPACK_IMPORTED_MODULE_0__.Sushi(0, 0);
             dataObject.foodObj = sushi;
         }else if(obj.parentElement.classList.contains("pastry")){
@@ -695,6 +695,10 @@ function dragAndDrop(newGame){
             dataObject.foodObj = pastry;
         }
         else if(obj.parentElement.classList.contains("addon")){
+            let topping = e.target.dataset.ingredient;
+            dataObject.foodObj[topping] = 1;
+        }
+        else if(obj.parentElement.classList.contains("sushi-addon")){
             let topping = e.target.dataset.ingredient;
             dataObject.foodObj[topping] = 1;
         }
@@ -1114,6 +1118,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _images_salmon_png__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../images/salmon.png */ "./src/images/salmon.png");
 /* harmony import */ var _images_pastry_png__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../images/pastry.png */ "./src/images/pastry.png");
 /* harmony import */ var _images_pizza_png__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../images/pizza.png */ "./src/images/pizza.png");
+/* harmony import */ var _images_rice_png__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ../images/rice.png */ "./src/images/rice.png");
+
 
 
 
@@ -1244,6 +1250,10 @@ function showBurgerIcon(obj, ele) {
         obj.onion == 0){
             burgerPic.src = _images_burger_plain_png__WEBPACK_IMPORTED_MODULE_1__;
         }
+        else if(obj.name === "sushi" && obj.salmon === 0 && obj.tuna === 0){
+            burgerPic.src = _images_rice_png__WEBPACK_IMPORTED_MODULE_13__
+        }
+
         else if(
         obj.name === "sushi" && obj.salmon == 1){
         burgerPic.src = _images_salmon_png__WEBPACK_IMPORTED_MODULE_10__;
@@ -1383,6 +1393,16 @@ module.exports = __webpack_require__.p + "9c12bd97a08ac4ea1797.png";
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 module.exports = __webpack_require__.p + "6d04321ba50903c61f80.png";
+
+/***/ }),
+
+/***/ "./src/images/rice.png":
+/*!*****************************!*\
+  !*** ./src/images/rice.png ***!
+  \*****************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+module.exports = __webpack_require__.p + "33c1fc16159ff8736254.png";
 
 /***/ }),
 

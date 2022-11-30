@@ -37,7 +37,7 @@ export function dragAndDrop(newGame){
         }else if(obj.parentElement.classList.contains("pizza")){
             const pizza = new Pizza();
             dataObject.foodObj = pizza;
-        }else if(obj.parentElement.classList.contains("sushi")){
+        }else if(obj.parentElement.classList.contains("rice")){
             const sushi = new Sushi(0, 0);
             dataObject.foodObj = sushi;
         }else if(obj.parentElement.classList.contains("pastry")){
@@ -45,6 +45,10 @@ export function dragAndDrop(newGame){
             dataObject.foodObj = pastry;
         }
         else if(obj.parentElement.classList.contains("addon")){
+            let topping = e.target.dataset.ingredient;
+            dataObject.foodObj[topping] = 1;
+        }
+        else if(obj.parentElement.classList.contains("sushi-addon")){
             let topping = e.target.dataset.ingredient;
             dataObject.foodObj[topping] = 1;
         }
